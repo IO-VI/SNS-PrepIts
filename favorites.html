@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitres Favoris</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #4a90c4);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chapter-card {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chapter-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 20px;
+        }
+        
+        .chapter-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .chapter-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .chapter-description {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chapitres Favoris</h1>
+        </header>
+        <div id="favorites-grid" class="chapters"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chapterData = {
+                "1": { title: "Clarification des concepts", description: "Introduction aux concepts fondamentaux du système de santé" },
+                "2": { title: "Les composantes du système national de santé", description: "Analyse des éléments constitutifs du système de santé marocain" },
+                "3": { title: "Organisation du Ministère de la santé", description: "Structure et fonctionnement du Ministère de la santé" },
+                "4": { title: "Organisation de l'offre de soins au Maroc", description: "Panorama de l'organisation des soins de santé au Maroc" },
+                "5": { title: "Le réseau hospitalier (RH)", description: "Présentation détaillée du réseau hospitalier marocain" },
+                "6": { title: "Le réseau d'établissements de soins de santé primaires (RESSP)", description: "Le rôle central des soins de santé primaires" },
+                "7": { title: "Réseau intégré des soins d'urgences médicales (RISUM)", description: "Organisation et gestion des urgences médicales" },
+                "8": { title: "Le réseau des établissements médico-sociaux (REMS)", description: "Structures médico-sociales et leur importance" },
+                "9": { title: "La couverture sanitaire", description: "Analyse de la couverture sanitaire au Maroc" },
+                "10": { title: "La participation communautaire", description: "Rôle de la communauté dans le système de santé" },
+                "11": { title: "Le circuit du malade & filière de soins", description: "Parcours du patient dans le système de santé" },
+                "12": { title: "Les programmes de santé", description: "Programmes nationaux de santé et leur mise en œuvre" },
+                "13": { title: "Ressources humaines du Ministère de la santé", description: "Gestion des ressources humaines dans le secteur de la santé" }
+            };
+
+            const favoritesGrid = document.getElementById('favorites-grid');
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            if (favorites.length === 0) {
+                favoritesGrid.innerHTML = '<p>Aucun chapitre en favori.</p>';
+            } else {
+                favorites.forEach(fav => {
+                    const chapterNum = fav.replace('Chapter ', '');
+                    const chapterInfo = chapterData[chapterNum];
+                    if (chapterInfo) {
+                        const card = document.createElement('div');
+                        card.className = 'chapter-card';
+                        card.innerHTML = `
+                            <a href="${chapterNum}.html">
+                                <div class="chapter-number">${chapterNum}</div>
+                                <div class="chapter-title">${chapterInfo.title}</div>
+                                <div class="chapter-description">${chapterInfo.description}</div>
+                            </a>
+                        `;
+                        favoritesGrid.appendChild(card);
+                    }
+                });
+            }
+
+            const fabContainer = document.createElement('div');
+            fabContainer.className = 'fab-container';
+
+            fabContainer.innerHTML = `
+                <div class="fab-menu">
+                    <button id="backToIndex" title="Back to Index">🏠</button>
+                    <button id="modeBtn" title="Toggle Day/Night Mode">🌗</button>
+                </div>
+                <button id="fabMain" class="fab-main">☰</button>
+            `;
+            document.body.appendChild(fabContainer);
+
+            const fabMain = document.getElementById('fabMain');
+            const fabMenu = document.querySelector('.fab-menu');
+
+            fabMain.addEventListener('click', () => {
+                fabMenu.classList.toggle('open');
+                fabMain.textContent = fabMenu.classList.contains('open') ? '✕' : '☰';
+            });
+
+            document.getElementById('backToIndex').addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+
+            document.getElementById('modeBtn').addEventListener('click', () => {
+                document.body.classList.toggle('night-mode');
+            });
+        });
+    </script>
+</body>
+</html>

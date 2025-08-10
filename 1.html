@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 1 : Le Système National de Santé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+        }
+
+        .chapter-header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+
+        .content-area {
+            padding: 30px 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .source {
+            font-style: italic;
+            text-align: right;
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .highlight-red {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .highlight-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .highlight-box {
+            display: flex;
+            gap: 30px;
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .highlight-box .column {
+            flex: 1;
+        }
+        
+        .highlight-box h4 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        .highlight-box ul li::before {
+             content: '–';
+             color: var(--text-color);
+        }
+
+        .list-styled {
+            padding-left: 0;
+        }
+
+        .list-styled li {
+            padding-left: 30px;
+        }
+        
+        .list-styled li::before {
+            font-family: monospace;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        
+        .list-styled.arrow li::before {
+            content: '➤';
+            color: var(--primary-color);
+        }
+
+        .list-styled.diamond li::before {
+            content: '❖';
+            color: #E67E22; /* Orange pour se différencier */
+        }
+        
+        .bold-keyword {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header { padding: 20px; }
+            .chapter-header h1 { font-size: 1.8em; }
+            .section-title { font-size: 1.5em; }
+            .card h3 { font-size: 1.2em; }
+            .highlight-box { flex-direction: column; gap: 20px;}
+        }
+
+    </style>
+</head>
+<body id="chapter-1">
+
+    <div class="container">
+        <header class="chapter-header">
+            <h1>Le Système National de Santé</h1>
+        </header>
+
+        <main class="content-area">
+
+            <section id="concepts">
+                <h2 class="section-title">I. Clarification des concepts</h2>
+
+                <article class="card">
+                    <h3>1. Santé</h3>
+                    <p>Un état de complet bien être physique, mental et social, et ne consiste pas seulement en une absence de maladie ou d'infirmité.</p>
+                    <p class="source">Préambule de la Constitution de l'OMS, 1946</p>
+                </article>
+
+                <article class="card">
+                    <h3>2. Santé publique</h3>
+                    <p>La santé publique est « <span class="bold-keyword">la science ou l'art de prévenir les maladies, d'améliorer la santé et la vitalité physique et mentale de l'individu, de prolonger la vie par le moyen d'une action collective concertée, visant à :</span></p>
+                    <ul>
+                        <li>Assainir le milieu ;</li>
+                        <li>Lutter contre les maladies qui présentent une incidence sociale ;</li>
+                        <li>Enseigner à l'individu les règles d'hygiène personnelle ;</li>
+                        <li>Organiser les services médicaux et infirmiers en vue du diagnostic précoce et d'un traitement préventif des maladies ;</li>
+                        <li>Mettre en œuvre des mesures sociales propres à assurer à chaque membre de la collectivité un niveau de vie compatible avec le maintien de sa santé. »</li>
+                    </ul>
+                    <p class="source">(OMS, 1952)</p>
+                </article>
+
+                <article class="card">
+                    <h3>3. Santé communautaire</h3>
+                    <p>La santé communautaire peut être considérée comme une approche pouvant servir à planifier le système de santé d’un pays où une large part est faite à la participation de la population, grâce à des interventions dans lesquelles les membres de la communauté peuvent participer à la prise en charge de leur état de santé et devenir des agents pour la production et l’entretien de la santé au niveau des ménages et de la communauté.</p>
+                    <p class="source">(Gagnon 2011)</p>
+                </article>
+                
+                <article class="card">
+                    <h3>4. Soins de santé primaires (SSP)</h3>
+                    <p>Soins essentiels (curatifs, préventifs et promotionnels) reposant sur des méthodes, des techniques, et des pratiques scientifiquement valables et socialement acceptables, rendus universellement accessibles à tous avec leur pleine participation de la communauté et à coût supportable par le pays. Ils représentent le premier niveau de contact des individus, de la famille et de la communauté avec le système national de santé</p>
+                    <p class="source">OMS à Alma Ata en 1978</p>
+                </article>
+                
+                <article class="card">
+                    <h3>5. Service de santé</h3>
+                    <p>« Ensemble de prestations offertes à la population, par le développement d’un dispositif ou d’unités sanitaires opérationnelles dont la finalité est de prendre en charge les besoins en matière de soins, de prévention et de réhabilitation de cette population »</p>
+                </article>
+                
+                <article class="card">
+                    <h3>6. Un programme de santé</h3>
+                    <p>Un programme de santé doit être assorti d'objectifs et de cibles précis, qui soient quantifiés et en harmonie avec la stratégie sanitaire nationale, exemple : programme de maternité sans risque.</p>
+                </article>
+
+                <article class="card">
+                    <h3>7. Système de santé</h3>
+                    <p>« Un ensemble cohérent, composé de nombreux éléments, tant sectoriels qu'intersectoriels, liés les uns aux autres et à la communauté même, qui ont conjointement une incidence sur la santé de la population »</p>
+                    
+                    <div class="highlight-box">
+                        <div class="column">
+                            <h4>Six fonctions du système de santé (OMS 2007)</h4>
+                            <ul>
+                                <li>Prestations de services</li>
+                                <li>Développement des Ressources humaines</li>
+                                <li>Information</li>
+                                <li>Médicaments, vaccins et technologies</li>
+                                <li>Financement</li>
+                                <li>Administration générale / gouvernance</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Objectifs du système de santé</h4>
+                             <ul>
+                                <li>Administration générale des systèmes de santé</li>
+                                <li>Réactivité</li>
+                                <li>Protection contre les risques financiers et sociaux</li>
+                                <li>Efficacité renforcer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="systeme-marocain">
+                <h2 class="section-title">II. Système National de Santé (Maroc)</h2>
+
+                <article class="card">
+                    <h3>8. Système National de Santé</h3>
+                    <p>L’ensemble des institutions, des organismes, des actions et des ressources y affectées, intervenant dans le domaine de la protection de la santé, aussi bien dans le secteur public que dans le secteur privé, aux niveaux national et régional, et qui sont organisés pour réaliser la sécurité sanitaire et à protéger la santé de la population, prémunir les individus contre les maladies, les épidémies et les risques menaçant leur vie et à leur garantir la vie dans un environnement sain.</p>
+                    <p class="source">(Définition établie à partir de l’Art 2 et 3 de la Loi cadre 06.22)</p>
+
+                    <h4 class="highlight-title">Les principes du système de santé marocain loi 34.22 :</h4>
+                    <ul class="list-styled diamond">
+                        <li><span class="highlight-red">L'égalité</span> d'accès aux soins et services de santé,</li>
+                        <li><span class="highlight-red">La solidarité & la responsabilité de la population</span>, dans la prévention, la conservation et la restauration de la santé</li>
+                        <li><span class="highlight-red">L'équité</span> dans la répartition spatiale des ressources sanitaires</li>
+                        <li><span class="highlight-red">La complémentarité</span> intersectorielle.</li>
+                        <li><span class="highlight-red">L'adoption de l'approche genre en matière des services de santé.</span></li>
+                    </ul>
+                    <p class="source">Art. 2 loi cadre n°34-09 relative au SS et à l’offre de soins (2011)</p>
+                </article>
+
+                <article class="card">
+                     <h4 class="highlight-title">Les principes du système de santé marocain selon loi 06.22</h4>
+                    <ul class="list-styled arrow">
+                        <li>L'égalité d'accès aux soins et aux prestation de santé</li>
+                        <li>La Continuité des prestations de santé</li>
+                        <li>L'équité et équilibre dans la répartition spatiale (des Ressources et des structures et des prestations de santé)</li>
+                        <li>Bonne gouvernance</li>
+                        <li>L'adoption de l'approche genre dans l'élaboration des politiques, stratégies et programmes de santé</li>
+                        <li>La gestion basée sur les résultats et la corrélation entre la responsabilité et la reddition des comptes.</li>
+                        <li>La Mutualisation des moyens</li>
+                        <li>Mobilisation et participation (citoyens,institution s,organismes publics et privés, société civiles..)</li>
+                    </ul>
+                     <p class="source">l’Art 4 de la Loi cadre 06.22</p>
+
+                    <h4 class="highlight-title">Modèle de système de soins au Maroc (loi 34-09)</h4>
+                     <ul>
+                        <li>Pyramidal,</li>
+                        <li>Intégré,</li>
+                        <li>Hiérarchisé</li>
+                        <li>Et fondé sur les Soins de Santé Primaires.</li>
+                    </ul>
+
+                    <h4 class="highlight-title">Les moyens du système de santé</h4>
+                    <ul>
+                        <li><span class="bold-keyword">La restauration</span> de la santé correspond à la distribution de soins à l'individu malade.</li>
+                        <li><span class="bold-keyword">La prévention</span> se propose d'éviter ou de réduire le nombre et la gravité des maladies ou accidents.</li>
+                        <li><span class="bold-keyword">La promotion</span> de la santé élargit le concept de prévention ; elle met à la disposition des populations les moyens d'augmenter leur capital santé.</li>
+                        <li><span class="bold-keyword">L'éducation</span> pour la santé a pour objectif de mettre à portée de tous l'information nécessaire à des choix adaptés à la santé présente et future.</li>
+                    </ul>
+
+                     <h4 class="highlight-title">Qualités d’un système de santé</h4>
+                     <ul>
+                        <li>Global</li>
+                        <li><span class="bold-keyword">Efficace</span></li>
+                        <li><span class="bold-keyword">Accessible</span></li>
+                        <li><span class="bold-keyword">Acceptable</span></li>
+                        <li><span class="bold-keyword">Équitable</span></li>
+                        <li>Planifiable et évaluable</li>
+                        <li>Souple et modifiable</li>
+                     </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

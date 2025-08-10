@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 9 : La couverture sanitaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .content-area {
+            padding: 30px 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h3, h4, h5 { font-weight: 600; margin-bottom: 15px; }
+        h3 { font-size: 1.6em; color: var(--primary-color); }
+        h4 { font-size: 1.3em; color: var(--accent-color); margin-top: 30px; }
+        h5 { font-size: 1.1em; color: var(--primary-color); }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        ul { list-style: none; padding-left: 0; }
+        li { position: relative; margin-bottom: 10px; padding-left: 25px; }
+
+        ul.simple-list li::before, .list-styled li::before { position: absolute; left: 0; font-weight: bold; }
+        .simple-list li::before { content: '•'; color: var(--primary-color); }
+        .diamond-list li::before { content: '❖'; color: var(--accent-color); }
+        .arrow-list li::before { content: '➤'; color: var(--primary-color); }
+        .nested-list { margin-top: 10px; padding-left: 20px; }
+        .nested-list li::before { content: '–'; color: var(--text-color); font-weight: normal; }
+
+        .highlight-red { color: var(--accent-color); font-weight: 600; }
+        
+        /* Table Styles */
+        .table-container { overflow-x: auto; margin: 25px 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid var(--border-color); padding: 12px 15px; text-align: left; }
+        thead { background-color: var(--primary-color); color: white; }
+        tbody tr:nth-child(even) { background-color: #f8f9fa; }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body id="chapter-9">
+
+<div class="container">
+    <header class="chapter-header">
+        <h2>La couverture sanitaire</h2>
+    </header>
+
+    <main class="content-area">
+
+        <section class="section">
+            <h3>Le découpage sanitaire :</h3>
+            <p>L’offre de soins doit être répartie sur l'ensemble du territoire national de manière équilibrée et équitable, sur la base de la carte sanitaire et des schémas régionaux de l’offre de soins.</p>
+            <p>A cet effet le territoire national est découpé en territoire de santé qui constitue des bassins de desserte de la population desservie par un ou plusieurs établissements ou installation de santé.</p>
+            <p>La délimitation de ces territoires qui se base sur le découpage administratif du royaume, peut être complétée le cas échéant par un découpage spécifique fixé par le ministre de la santé en vue d'arrêter les territoires les plus pertinents pour l'action sanitaire.</p>
+            
+            <h5>a) Les territoires de santé sont :</h5>
+            <ul class="simple-list">
+                <li>Les circonscriptions sanitaires ;</li>
+                <li>Les préfectures et provinces sanitaires ;</li>
+                <li>Les régions sanitaires ;</li>
+                <li>Les territoires de santé interrégionaux ;</li>
+            </ul>
+
+            <ul class="diamond-list" style="margin-top:20px;">
+                <li><strong>La circonscription sanitaire :</strong></li>
+            </ul>
+            <p>La circonscription sanitaire représente le territoire de base dans le découpage sanitaire pour la planification de l’offre de soins et la mise en œuvre des stratégies, des programmes et plans d’action sanitaires.</p>
+            <p>La circonscription sanitaire correspond à l’aire géographique où l’ensemble des prestations de santé primaires doivent être disponible. Ces prestations comprennent les activités requises de prévention, de promotion de la santé et des modes de vie sains, ainsi que les soins liés à l'accouchement, aux urgences de proximité et à la médecine générale.</p>
+            <p>La circonscription sanitaire peut être rurale et qui correspond au territoire d’un caïdat ou urbaine qui correspond au territoire d’un arrondissement dans les communes urbaines découpées en arrondissements, ou au territoire de l'ensemble de la commune urbaine, lorsque celle-ci n’est pas découpée en arrondissement.</p>
+            <p>Chaque circonscription sanitaire est découpée en deux ou plusieurs secteurs sanitaires ; que chacun correspond à l’aire de desserte d'un centre de santé.</p>
+            
+            <ul class="diamond-list" style="margin-top:20px;">
+                <li><strong>Les préfectures et provinces sanitaires :</strong></li>
+            </ul>
+            <p>Les préfectures et provinces correspondent respectivement aux ressorts territoriaux des préfectures et provinces administratives du royaume.</p>
+            <p>Chaque préfecture est découpée en deux ou plusieurs circonscriptions sanitaires. L’offre de soins au niveau d’une préfecture ou province sanitaire correspond, en plus des prestations de soins de santé primaires, des prestations de réhabilitation et des prestations hospitalières de premier niveau.</p>
+            <p>La préfecture ou la province sanitaire constitue le champ d'intervention d’une délégation préfectorale ou provinciale relevant du ministère de la santé.</p>
+            
+            <ul class="diamond-list" style="margin-top:20px;">
+                <li><strong>Les régions sanitaires :</strong></li>
+            </ul>
+            <p>Les régions sanitaires correspondent au ressort territorial des régions administratives du royaume. Chaque région sanitaire est composée de deux ou plusieurs préfectures et provinces sanitaires. L'offre de soins au niveau d'une région sanitaire comporte, en plus des prestations de soins du niveau préfectoral provincial, les prestations hospitalières du deuxième niveau. La région sanitaire constitue le champ d'intervention de la direction régionale de la santé relevant du ministère de la santé</p>
+
+            <ul class="diamond-list" style="margin-top:20px;">
+                <li><strong>Le territoire sanitaire inter- régional</strong></li>
+            </ul>
+            <p>Il correspond au bassin de desserte d’ une infrastructure, d’un équipement, d’une installation de santé ou d’une installation de haute technologie rendant des prestations hospitalières supra régionales, notamment les prestations hospitalières du troisième niveau. Ce territoire comprend en moyen de deux régions sanitaires.</p>
+        </section>
+
+        <section class="section">
+            <h3>La couverture sanitaire :</h3>
+            <h4>a) Définition :</h4>
+            <ul class="arrow-list">
+                <li>La couverture sanitaire est l'offre de prestations ou de services de santé à une population par le développement d'un dispositif ou d'unités opérationnelles dont la finalité est de prendre en charge les besoins de la population en matière de soins, de prévention et de réhabilitation de cette population.</li>
+                <li>La couverture sanitaire constitue d'abord une réponse organisée à des besoins de santé par des services de santé en vue d'assurer la prise en charge d'épisodes de risque ou d'épisodes de maladie d'une population déterminée.</li>
+            </ul>
+
+            <h4>b) Modes et stratégies de couverture sanitaire :</h4>
+			<p>La stratégie de couverture sanitaire permettant la dispensation des prestations de santé ou services de santé à la population est organisée selon trois modes :</p>           
+		   <ul class="arrow-list">
+                 
+                 <li><strong>Mode fixe.</strong></li>
+                 <li><strong>Mode mobile:</strong>
+                    <ul class="nested-list">
+                        <li>Visites à domicile (VD) ;</li>
+                        <li>Unités médicales mobiles (UMM) ; (Équipe mobile) ;</li>
+                        <li>Caravanes médicales spécialisées (CMS) ;</li>
+                        <li>Hôpitaux mobiles (HM).</li>
+                    </ul>
+                 </li>
+                 <li><strong>Mode participatif (participation communautaire).</strong></li>
+            </ul>
+            <p>Les modes de couverture sanitaire sont définis en fonction de l’éloignement des localités de l’établissement de soins de santé primaire (Répartition kilométrique au tout de l’ESSP) :</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Répartition kilométrique de la population</th>
+                            <th>Mode couverture</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>&lt; 3 km</td><td>Fixe</td></tr>
+                        <tr><td>3 à 6 km</td><td>Visite à domicile (VAD) ou relance</td></tr>
+                        <tr><td>6 à 10 km</td><td>Points de contact ou équipe mobile</td></tr>
+                        <tr><td>&gt; 10 km</td><td>Équipe Mobile</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h4>c) Milieu rural :</h4>
+            <ul class="arrow-list">
+                <li><strong>Mode fixe :</strong>
+                    <p style="padding-left:0; margin-bottom:10px;">L’offre de soins en mode fixe dans le secteur public est composée des quatre réseaux d'établissements de santé relevant du ministère de la santé ou placés sous sa tutelle</p>
+                    <ul class="nested-list">
+                        <li>Le réseau des établissements de soins de santé primaires(<span class="highlight-red">RESSP</span>)</li>
+                        <li>Le réseau hospitalier (<span class="highlight-red">RH</span>)</li>
+                        <li>Le réseau intégré des soins d’urgence médicale (<span class="highlight-red">RISUM</span>)</li>
+                        <li>Le réseau des établissements médico-sociaux publics (<span class="highlight-red">REMSP</span>)</li>
+                    </ul>
+                </li>
+                 <li style="margin-top:20px;"><strong>Mode mobile :</strong>
+                    <p style="padding-left:0;">Il est développé à partir d'un ESSP et s'adresse à la population située en dehors de son aire d'influence et ayant des difficultés pour utiliser les services qu’il offre (<strong>localités situées à plus de 6 km</strong>). Il constitue le prolongement des services de la formation qui vont concerner la population de son territoire.</p>
+                    <p style="padding-left:0;">Ce mode dont la finalité est de soutenir, de renforcer le mode fixe pour étendre la couverture sanitaire et permettre la fourniture de prestations sanitaires à domicile ou à proximité. C’est le personnel de santé qui se déplace pour se rendre chez la <strong>population située dans un rayon de plus de 6km</strong>, selon trois modalités :</p>
+                </li>
+            </ul>
+            
+            <div class="card">
+                <h4 class="diamond-list" style="margin:0;">La visite à domicile :</h4>
+                <p>Cette modalité de couverture sanitaire constitue un élément essentiel de la stratégie mobile qui se traduit par la réalisation de visites aux foyers des bénéficiaires de cette action par des professionnels de santé dans le cadre de circuit de porte à porte, de relances et enquête épidémiologique.</p>
+                <p>Les visites à domicile constituent un modèle de prestation des services de santé qui peut être utilisé pour offrir plusieurs types de prestations aux différents bénéficiaires ciblés dans leurs domiciles. Les programmes de visites à domicile peuvent varier considérablement en matière d'objectifs, de bénéficiaires, de professionnel de santé, d'activités et d’horaires.</p>
+                <ul class="simple-list"><li><strong>La cible</strong></li></ul>
+                <p>Cette modalité vise à offrir des prestations de soins et de services de proximité à la population non couvertes par le mode fixe, et à relancer les malades perdus de vue ou les populations à risque.</p>
+            </div>
+
+            <div class="card">
+                <h4 class="diamond-list" style="margin:0;">L'équipe mobile : (Unités mobiles médicalisées)</h4>
+                <p>L’unité médicale mobile est composée d’ une équipe de professionnels de santé qui se déplace par véhicule vers un <span class="highlight-red">point de rassemblement</span> de la population afin de lui délivrer des prestations de santé.</p>
+                 <ul class="simple-list">
+                     <li><strong>Type</strong>
+                         <ul class="nested-list">
+                             <li><strong>Type A :</strong> Unité Médicale Mobile Soins de Santé Primaires</li>
+                             <li><strong>Type B :</strong> Unité Médicale Mobile de Santé Scolaire</li>
+                             <li><strong>Type C :</strong> Unité Médicale Mobile Spécialisée</li>
+                         </ul>
+                     </li>
+                     <li><strong>La cible</strong>
+                         <ul class="nested-list">
+						 <li>Population habitant des localités situées au delà de 6 km de l’ESSP;</li>
+						 <li>Population habitant des localités < 6 km si géographie difficile ou agglomération importante ou problème sanitaire nécessitant une intervention de proximité.</li>
+						 </ul>
+						 </li>
+                     <li><strong>Principes de base</strong>
+					 <ul class="nested-list">
+						 <li>Considérer le mode mobile comme une extension du fixe et non une alternative</li>
+						 <li>Offrir aux populations des localités enclavées et celles d’accès difficile un paquet d’activités qui répond à leurs besoins et attentes et aux objectifs des programmes sanitaires</li>
+						 <li>Impliquer la communauté depuis la programmation jusqu’à l’exécution et l’évaluation des activités de l’équipe</li>
+						 <li>Privilégier une programmation depuis l’établissement de Soins de Santé Primaire de desserte de la population cible ou de la circonscription sanitaire</li>
+						 </ul>
+						 </li>
+						 <li><strong>Le paquet d’activité</strong>
+					 <ul class="nested-list">
+					 <p> doit être diversifié et intégré (Activités préventives, curatives et promotionnelles) Il doit :</p>
+						 <li>Répondre aux besoins et aux attentes de la population cible.</li>
+						 <li>S’inscrire dans les objectifs des programmes sanitaires.</li>
+						 <li>Prendre en considération le profil épidémiologique des localités cibles.</li>
+						 </ul>
+                     </li>
+                 </ul>
+            </div>
+            
+            <div class="card">
+                 <h4 class="diamond-list" style="margin:0;">Caravane médicale spécialisée(CMS)</h4>
+                 <p>Elle est institutionnalisée par le Décret n° 2-14-562 du 7 Chaoual 1436 (24 juillet 2015) pris pour l’application de la loi-cadre n° 34-09 relative au système de santé et à l’offre de soins.</p>
+                 <p>C’est une intervention de santé, limitée dans <span class="highlight-red">l’espace et dans le temps</span>, elle mobilise des ressources (humaines, matérielles, et financières) pour délivrer des <span class="highlight-red">prestations sanitaires</span> (curatives, préventives et promotionnelles) au profit d’une population cible ayant des <span class="highlight-red">difficultés d’accès aux prestations de soins curatifs spécialisés</span>.</p>
+                 <ul class="simple-list">
+                     <li><strong>Type</strong><p>On distingue deux types de Caravane Médicale Spécialisée :</p>
+                        <ul class="nested-list">
+                            <li><strong>CMS Type A :</strong> Caravane Médicale Spécialisée <span class="highlight-red">Ambulatoire</span> (au niveau des <span class="highlight-red">ESSP</span>).</li>
+                            <li><strong>CMS Type B :</strong> Caravane Médicale Spécialisée <span class="highlight-red">Hospitalière</span> (au niveau d’un <span class="highlight-red">hôpital</span>).</li>
+                        </ul>
+                     </li>
+                     <li><strong>Objectifs spécifiques</strong>
+                         <ul class="nested-list">
+                            <li>Adapter le paquet de prestations de santé aux besoins réels des populations cibles ;</li>
+                            <li>Impliquer davantage les médecins spécialistes dans les actions de santé publique ;</li>
+                            <li>Contribuer au transfert des connaissances entre les prestataires de soins.</li>
+                            <li>Elle complète les interventions de l’équipe mobile.</li>
+                         </ul>
+                     </li>
+                     <li><strong>Elle peut-être :</strong>
+                        <ul class="nested-list">
+                            <li>Multidisciplinaire : associant plusieurs spécialités</li>
+                            <li>Spécialisée : focalisée sur un problème de santé ou une spécialité.</li>
+							<li>Elle constitue un espace favorisant davantage implication des médecins spécialistes dans les actions de santé publique.</li>
+                        </ul>
+                     </li>
+					 
+					 <li><strong>Elles peuvent être organisées soit par :</strong>
+                        <ul class="nested-list">
+					 <li>Les régions avec des partenaires.</li>
+					<li>Le Ministère de la santé selon un programme national pré-établi.</li>
+					  </ul>
+                     </li>
+                     <li><strong>Étape</strong>
+                        <ul class="nested-list">
+                            <li>1ère étape : Phase Préparatoire.</li>
+                            <li>2ème étape : Installation de la caravane médicale. Généralement, cette installation est réalisée 1 à 2 jours avant le début des activités</li>
+                            <li>3éme étape : Organisation du poste de travail</li>
+                            <li>4éme étape : Organisation des transferts</li>
+                            <li>5éme étape : Suivi des malades après le passage de la CMS</li>
+                        </ul>
+                     </li>
+                      <li><strong>Le paquet des activités prodiguées au cours d'une CMS sont de trois ordres.</strong>
+                        <ul class="nested-list">
+                            <li><span class="highlight-red">Des soins préventifs</span></li>
+                            <li><span class="highlight-red">Des soins curatifs</span></li>
+                            <li><span class="highlight-red">Des activités promotionnelles de santé</span></li>
+                        </ul>
+                     </li>
+                 </ul>
+            </div>
+            
+            <div class="card">
+                <h4 class="diamond-list" style="margin:0;">L'hôpital mobile :</h4>
+                <p>Établissement de soins qui profitera aux populations les plus démunies situées dans les zones rurales et enclavées.</p>
+                <p>Constitué d'un ensemble de tentes et de containers normalisés, d’un matériel médical conditionné afin d’être facilement transportable et d’une équipe multidisciplinaire composée de médecins, infirmiers, techniciens biomédicaux et personnel d'entretien et de soutien.</p>
+                <ul class="simple-list">
+                    <li><strong>but</strong>
+                        <ul class="nested-list">
+                            <li>Offrir à la population des zones rurales enclavées des prestations de soins hospitaliers de proximité dans les disciplines médicales et chirurgicales auxquelles elles n’ont pas accès.</li>
+                            <li>Intervenir lors des situations des catastrophes et d’exceptions.</li>
+                        </ul>
+                    </li>
+                    <li><strong>paquet d'activités</strong>
+                        <ul class="nested-list">
+                            <li>Fonctionnelles: audiométrie, réfractométrie, spirométrie et endoscopie.</li>
+                            <li>Activités d'admission</li>
+                            <li>accouchement;</li>
+                            <li>Hospitalisations: chirurgicales et médicales</li>
+                            <li>Consultations spécialisées;</li>
+                            <li>Spécialités de la mère enfant: pédiatrie et gynéco-obstétrique.</li>
+                            <li>spécialités médicales: gastro-entérologie, pneumologie, cardiologie, dermatologie et endocrinologie</li>
+                            <li>spécialités chirurgicales: chirurgie générale, chirurgie infantile, orthopédie</li>
+                            <li>spécialités Médico-chirurgicales, ophtalmologie, ORL.</li>
+                            <li>spécialités bucco-dentaire.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Critères d'implantation</strong>
+                         <ul class="nested-list">
+                            <li>Offre de soins hospitalière dans la province;</li>
+                            <li>Enclavement et exposition aux conditions météorologiques difficiles;</li>
+                            <li>Taux de pauvreté et de vulnérabilité;</li>
+                            <li>Une population cible estimée à 50000 personnes par site.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 12 : Les programmes de santé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .content-area {
+            padding: 30px 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h3, h4 { font-weight: 600; }
+        h3 { font-size: 1.4em; color: var(--primary-color); margin-bottom: 15px; }
+        h4 { font-size: 1.2em; color: var(--text-color); margin-top: 25px; margin-bottom: 10px;}
+
+        ul, ol { list-style: none; padding-left: 0; }
+        li { position: relative; margin-bottom: 10px; }
+
+        .list-styled {
+            padding-left: 0;
+        }
+        
+        .list-styled li {
+            padding-left: 25px;
+        }
+
+        .list-styled li::before {
+             position: absolute; left: 0; font-weight: bold;
+        }
+        
+        .arrow-list > li > strong {
+            display: block;
+        }
+        .arrow-list > li::before {
+            content: '➤'; color: var(--primary-color);
+        }
+
+        .nested-list {
+             margin-top: 10px; padding-left: 20px;
+        }
+        .nested-list li::before {
+             content: '–'; color: var(--text-color); font-weight: normal;
+        }
+        
+        .main-program-list {
+            counter-reset: program-counter;
+        }
+        .main-program-list > li {
+            counter-increment: program-counter;
+            margin-bottom: 30px;
+        }
+        .main-program-list > li > h3::before {
+            content: counter(program-counter) ". ";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body id="chapter-12">
+
+<div class="container">
+    <header class="chapter-header">
+        <h2>Les programmes de santé</h2>
+    </header>
+
+    <main class="content-area">
+
+        <section class="section">
+            <p>Un programme de santé est constitué par un ensemble de ressources réunies et mises en œuvre pour fournir à une population définie des services organisés de façon cohérente dans le temps et dans l'espace en vue d'atteindre des objectifs déterminés en rapport avec un problème de santé précis.</p>
+            
+            <ul class="arrow-list list-styled">
+                <li><strong>L'organisation en programmes de santé au Maroc :</strong>
+                    <ul class="nested-list list-styled">
+                        <li>Un programme est un ensemble de services et d'activités intégrés, destinés à une population particulière (cible), visant des résultats spécifiques.</li>
+                        <li>L'organisation a permis de relever le défi des maladies cibles de la vaccination et des maladies en démo-épidémiques ;</li>
+                        <li>Extension progressive vers les maladies non transmissibles et la santé de populations vulnérables</li>
+                    </ul>
+                </li>
+                 <li><strong>Programme de santé : 3 dimensions</strong>
+                    <ul class="nested-list list-styled">
+                        <li>Problème de santé</li>
+                        <li>Population cible</li>
+                        <li>Milieu particulier</li>
+                    </ul>
+                </li>
+                 <li><strong>Composantes d'un programme de santé :</strong>
+                    <ul class="nested-list list-styled">
+                        <li>Contexte et situation problématique</li>
+                        <li>Objectifs généraux et spécifiques</li>
+                        <li>Population(s) cible(s)</li>
+                        <li>Stratégie(s) : axes d’interventions, actions</li>
+                        <li>Activités et ressources mobilisées</li>
+                        <li>Indicateurs de suivi</li>
+                    </ul>
+                </li>
+                <li><strong>Programmes développés par le Ministère de la Santé</strong>
+                    <ul class="nested-list list-styled">
+                        <li>Programmes de la santé de la mère et de l'enfant</li>
+                        <li>Programmes de santé des populations à besoins spécifiques</li>
+                        <li>Programmes de prévention et de lutte contre les maladies transmissibles</li>
+                        <li>Programmes de prévention et de lutte contre les maladies non transmissibles</li>
+                        <li>Programmes de santé environnement</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <ol class="main-program-list">
+                <li>
+                    <h3>Programmes de la santé de la mère et d'enfant</h3>
+                    <h4>Mère :</h4>
+                    <ul class="nested-list list-styled">
+                        <li>Programme national de surveillance de la grossesse et de l'accouchement</li>
+                        <li>Maternité sans risque</li>
+                        <li>Programme national de planification familiale</li>
+                        <li>Allaitement maternel</li>
+                    </ul>
+                    <h4>Enfant :</h4>
+                    <ul class="nested-list list-styled">
+                        <li>Programme national d'immunisation</li>
+                        <li>Programme national de lutte contre les maladies de carences.</li>
+                        <li>Programme national de lutte contre les maladies diarrhéiques</li>
+                        <li>Programme national de lutte contre les IRA</li>
+                        <li>Prise en charge intégrée de la santé de l'enfant</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Programmes de santé des populations à besoins spécifiques :</h3>
+                    <ul class="nested-list list-styled">
+                        <li>Programme national de Santé scolaire et universitaire</li>
+                        <li>Santé des jeunes</li>
+                        <li>Handicap et personnes âgées (programmes de réhabilitation, gériatrie)</li>
+                        <li>Protection des femmes et enfants victimes de violence</li>
+                    </ul>
+                </li>
+                 <li>
+                    <h3>Programmes de prévention et de lutte contre les maladies transmissibles :</h3>
+                    <ul class="nested-list list-styled">
+                        <li>PNLAT : Programme national de lutte contre la tuberculose</li>
+                        <li>Lutte contre les IST/SIDA</li>
+                        <li>Maladies parasitaires (paludisme, leishmaniose, bilharziose, hydatidose, schistosome,)</li>
+                        <li>Maladies cibles de la vaccination (poliomyélite, diphtérie, tétanos.)</li>
+                        <li>Maladies épidémiques (méningites, hépatites virales, rougeole, fièvre typhoïde, TIAC,)</li>
+                        <li>Programme national de lutte contre la cécité (trachome)</li>
+                        <li>Lutte contre la lèpre et maladies dermatologiques (lèpre)</li>
+                        <li>Zoonoses (rage, le charbon, la leptospirose et la brucellose)</li>
+                        <li>Programme de Surveillance épidémiologique</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Programmes de prévention et de lutte contre les maladies non Transmissibles :</h3>
+                    <ul class="nested-list list-styled">
+                        <li>Prévention et lutte contre le diabète</li>
+                        <li>Prévention des maladies cardio-vasculaires</li>
+                        <li>Lutte contre le cancer</li>
+                        <li>Lutte contre le tabagisme</li>
+                        <li>Lutte contre l’insuffisance rénale chronique.</li>
+                        <li>Santé mentale</li>
+                        <li>Lutte contre la toxicomanie</li>
+                        <li>Santé des travailleurs</li>
+                        <li>Santé bucco-dentaire</li>
+                        <li>Santé respiratoire (asthme, BPCO, ...)</li>
+                        <li>Maladies rares : hémophilie, thalassémie, ...</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Programmes de santé environnement :</h3>
+                    <ul class="nested-list list-styled">
+                        <li>Contrôle de l’eau de boisson</li>
+                        <li>Assainissement de base</li>
+                        <li>Lutte contre les vecteurs</li>
+                        <li>Hygiène alimentaire</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Plans et stratégies nationales :</h3>
+                    <ul class="nested-list list-styled">
+                        <li>Plan national pour l'organisation et le développement des soins médicaux d'urgence</li>
+                        <li>Plan d'accélération de la réduction de la mortalité maternelle et néonatale</li>
+                        <li>Plan d'accélération de la réduction de l'incidence de la tuberculose</li>
+                        <li>Stratégie nationale de prise en charge intégrée des femmes et des enfants victimes de violences.</li>
+                        <li>Stratégie nationale de toxicovigilance</li>
+                        <li>Stratégie nationale de pharmacovigilance</li>
+                        <li>Plan national de santé rurale</li>
+                        <li>Plan stratégique national de VIH-SIDA</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

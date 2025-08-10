@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 11 : Le circuit du malade & filière de soins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --success-color: #28a745; /* Vert pour les coches */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .content-area {
+            padding: 30px 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h3, h4 { font-weight: 600; }
+        h3 { font-size: 1.6em; color: var(--primary-color); }
+        h4 { font-size: 1.2em; color: var(--text-color); margin-top: 25px; margin-bottom: 15px;}
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        ul { list-style: none; padding-left: 0; }
+        li { position: relative; margin-bottom: 10px; padding-left: 25px; }
+
+        .list-styled li::before { position: absolute; left: 0; font-weight: bold; }
+        .simple-list li::before { content: '•'; color: var(--primary-color); }
+        .arrow-list li::before { content: '➤'; color: var(--primary-color); }
+        .diamond-list li::before { content: '❖'; color: var(--accent-color); font-size: 1.2em; }
+        .check-list li::before { content: '✓'; color: var(--success-color); font-size: 1.2em; }
+        .nested-list { margin-top: 10px; padding-left: 20px; }
+        .nested-list li::before { content: '–'; color: var(--text-color); font-weight: normal; }
+        
+        .highlight-red { color: var(--accent-color); font-weight: 600; }
+        
+        .organigram-container {
+            margin: 25px auto;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .organigram-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body id="chapter-11">
+
+<div class="container">
+    <header class="chapter-header">
+        <h2>Le circuit du malade & filière de soins</h2>
+    </header>
+
+    <main class="content-area">
+
+        <section class="section">
+            <h3>Définition de concepts :</h3>
+            <h4><span class="highlight-red">Parcours de soins coordonné</span> :</h4>
+            <p>C'est une organisation des prises en charge individuelles coordonnée entre plusieurs prestataires de soins ;</p>
+            <p>Elle permet :</p>
+            <ul class="simple-list">
+                <li>D'assurer une prise en charge globale du patient</li>
+                <li>Orienter le patient vers le bon interlocuteur pour gagner en efficacité et en qualité des soins (Éviter la multiplication des examens et des traitements).</li>
+                <li><strong>Filière de soins :</strong> La filière de soins : une organisation verticale hiérarchisée de la prise en charge des patients avec un premier contact d’accès aux soins, représenté par le médecin généraliste ou médecin traitant, et des niveaux de recours aux soins organisés selon la nature de la morbidité et protocoles thérapeutiques quand ils existent. (Ex : SONU).</li>
+                <li><strong>Un réseau de soins :</strong> est une offre multidisciplinaire coordonnée et organisée d'action collective des soins apportée par des professionnels en réponse à un besoin de santé des individus et/ou de la population, à un moment donné sur un territoire donné”.</li>
+                <li><strong>Réseau coordonné des soins :</strong> une organisation horizontale non hiérarchisée de la prise En charge des patients au sein du même territoire sanitaire. Il vise le renforcement de la coordination d'une prise en charge médicale multidisciplinaire. (RESSP, RH)</li>
+            </ul>
+
+            <h4><span class="highlight-red">Filière globale des soins</span> :</h4>
+            <p>La notion de filière est entendue comme le cheminement du malade entre les structures de soins :</p>
+            <ul class="simple-list">
+                <li>Ce cheminement traverse les réseaux de soins et bénéficie des programmes de santé</li>
+                <li>Les patients sont orientés à partir du dispensaire rural ou de l’équipe mobile vers le centre de santé rural le plus proche et le plus adapté, qui à son tour peut le référer à un niveau supérieur (hôpital de proximité, provincial ou région</li>
+                <li>L’accès aux services de soins, en cas de référence, obéit à certaines conditions à savoir :</li>
+                <li><strong>Accès au spécialiste</strong></li>
+                <li>Cet accès est conditionné par :
+                    <ul class="nested-list">
+                        <li>Un passage obligatoire par le médecin généraliste ;</li>
+                        <li>Une orientation hiérarchisée vers les autres spécialistes.</li>
+                    </ul>
+                </li>
+                <li style="margin-top:20px;"><strong>Accès à l'hospitalisation</strong></li>
+                <p>L'admission en hospitalisation est assurée par trois portes d'entrée : La Consultation Spécialisée :</p>
+                 <ul class="nested-list">
+                     <li>Centre de consultation spécialisée externe « CCE »,</li>
+                     <li>Centre de Diagnostic et de Traitement des Maladies Respiratoires « CDTMR »,</li>
+                     <li>Centre de Référence en Santé de la Reproduction « CRSR »</li>
+                     <li>Les Services des Urgences ;</li>
+                     <li>L’Hôpital de jour.</li>
+                 </ul>
+                 <p>Par ailleurs, cette hospitalisation est hiérarchisée en fonction des niveaux allant de l'Hôpital de proximité, l'Hôpital Provincial ou Préfectoral, l'Hôpital Régional jusqu’au CHU.</p>
+
+                <li style="margin-top:20px;"><strong>Accès aux urgences</strong></li>
+                <p>L'accès aux urgences peut être :</p>
+                 <ul class="nested-list">
+                     <li>Une auto référence dont la prise en charge sera fonction des résultats de l’évaluation de l'urgence (service de triage) ;</li>
+                     <li>Une référence par un médecin généraliste ou spécialiste :</li>
+                     <li>Une référence par une sage-femme ou un infirmier de garde.</li>
+                 </ul>
+
+                 <li style="margin-top:20px;"><strong>Accès au plateau technique</strong></li>
+                 <p>L'accès au plateau technique ne doit se faire que sur une ordonnance médicale délivrée par un médecin généraliste ou spécialiste.</p>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h4><span class="highlight-red">Système de référence et contre référence</span> :</h4>
+            <ul class="arrow-list list-styled">
+                <li><strong>Référence :</strong>
+                    <p style="padding-left:0;">C'est l’orientation et/ou le transfert du patient à un niveau supérieur de soins. La référence peut être justifiée par : Le manque de compétences appropriées ; L'insuffisance du plateau technique.</p>
+                </li>
+                <li><strong>Contre référence :</strong></li>
+            </ul>
+             <div class="organigram-container">
+                 <!-- IMPORTANT: Remplacez 'parcours-soins-diagram.png' par le chemin de votre image -->
+                <img src="parcours-soins-diagram.png" alt="Schéma du parcours de soins">
+            </div>
+            <p>C'est la réorientation du patient et / ou le retour de l'information le concernant vers le niveau référant.</p>
+             <ul class="arrow-list list-styled">
+                <li>L’objectif est d’assurer à la population référée une prise en charge de qualité à travers des services de soins intégrés et continus.</li>
+                <li>Les Supports de référence contre référence utilisés sont :
+                    <ul class="nested-list">
+                        <li>Fiche de référence / contre référence (carnet à souches)</li>
+                        <li>Registre de références :</li>
+                    </ul>
+                </li>
+             </ul>
+        </section>
+        
+        <section class="section">
+            <h4><span class="highlight-red">Filières de soins spécifiques</span> :</h4>
+            <ul class="diamond-list list-styled">
+                <li><strong>Prise en charge des accouchements et des complications obstétricales</strong>
+                    <p style="padding-left:0;">Les parturientes sont soit auto référée de leur domicile ou régulées à travers un SAMU obstétrical rural à un SOUB qui est le CSCA ou le CSUA qui assure les soins obstétricaux de base, puis en cas de besoin (transfusion sanguine, césarienne, réanimation) elles sont référées à un SOUC qui est le centre hospitalier adapté qui assure les soins obstétricaux.</p>
+                </li>
+                <li><strong>Le régime d'autorisation des installations de haute technologie et des équipements biomédicaux lourds :</strong>
+                     <p style="padding-left:0;">L'implantation de tout équipement biomédical lourd et l'implantation de toute installation de haute technologie par des établissements de santé publics ou privés, sont soumis à l'autorisation préalable du ministre de la santé.</p>
+                </li>
+            </ul>
+            
+            <div class="card">
+                <ul class="diamond-list list-styled">
+                    <li><strong>La commission nationale et les commissions régionales de l'offre de soins</strong>
+                        <ul class="check-list list-styled">
+                            <li>La commission nationale de l'offre de soins a pour mission, de donner son avis sur le projet de la carte sanitaire et sur tout projet de révision de celle-ci.</li>
+                            <li>Elle est présidée par le Ministre de la Santé ou, en cas d'empêchement de ce dernier, par le secrétaire général du ministère de la santé.</li>
+                            <li>Est tenue de se prononcer par avis sur les projets qui lui sont soumis dans un délai maximum de 60 jours à compter de la date de sa saisine.</li>
+                            <li>Les décisions de la commission sont prises à la majorité des voix des membres présents et en cas de partage égal des voix, celle du président est prépondérante.</li>
+                            <li>Le secrétariat de la commission nationale est assuré par la DHSA relevant du ministère de la santé.</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top:25px;"><strong>Les membres de la commission nationale de l'offre de soins</strong>
+                         <ul class="check-list list-styled">
+                            <li>Deux représentants de l'autorité gouvernementale chargée de l'intérieur, dont le directeur général des collectivités locales ou son représentant ;</li>
+                            <li>Un représentant de l'autorité gouvernementale chargée de l'économie et des finances ;</li>
+                            <li>Un représentant de l'autorité gouvernementale chargée de l'aménagement du territoire ;</li>
+                            <li>Un représentant de l'autorité gouvernementale chargée de l'enseignement supérieur ;</li>
+                            <li>Un représentant de l'autorité gouvernementale chargée de l'équipement et de la logistique ;</li>
+                            <li>Un représentant du haut-commissariat au plan ;</li>
+                            <li>L'inspecteur du service de santé des Forces Armées Royales ou son représentant ;</li>
+                            <li>Le président du conseil national de l'ordre national des médecins ou son représentant ;</li>
+                            <li>Le président du conseil national de l'ordre des pharmaciens ou son représentant ;</li>
+                            <li>Le président du Conseil National de l'ordre des médecins dentistes ou son représentant ;</li>
+                            <li>Les directeurs des centres hospitaliers régis par la loi 37-80 ;</li>
+                            <li>Les directeurs de l'administration centrale du Ministère de la santé ;</li>
+                            <li>La commission régionale de l'offre de soins</li>
+                            <li>Chaque commission régionale de l'offre de soins a pour mission de donner son avis sur le projet de SROS relatif à l'espace territorial de la région concernée et sur tout projet de révision de celui-ci.</li>
+                            <li>Chaque commission régionale de l'offre de soins est présidée par le wali de la région concernée ou son représentant.</li>
+                            <li>Le secrétariat de la commission régionale est assuré par la direction régionale de la santé.</li>
+                            <li>Chaque commission régionale est tenue de donner son avis sur le projet qui lui est soumis dans un délai maximum de 60 jours à compter de sa saisine.</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top:25px;"><strong>Les membres de la commission régionale de l'offre de soins</strong>
+                        <ul class="check-list list-styled">
+                             <li>Les gouverneurs des préfectures et provinces de la région ou leurs représentants ;</li>
+                             <li>Le président du conseil de la région ou l'un des vice-présidents de ce conseil ;</li>
+                             <li>Le représentant de l'autorité gouvernementale chargée de l'aménagement du territoire au niveau de la région ;</li>
+                             <li>Le Président du conseil régional de l'ordre national des médecins ou son représentant ;</li>
+                             <li>Le Président du conseil Régional de l'ordre des Pharmaciens d'officines ou son représentant ;</li>
+                             <li>Le Président du conseil régional de l'ordre des médecins dentistes ou son représentant ;</li>
+                             <li>Le directeur du Centre Hospitalier interrégional, dont le siège se trouve au niveau de la région ;</li>
+                             <li>Trois représentants des directions centrales relevant du Ministère de la santé désignée par le Ministre de la santé ;</li>
+                             <li>Le directeur régional de la santé ;</li>
+                             <li>Les délégués du ministère de la santé aux préfectures et provinces de la région.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

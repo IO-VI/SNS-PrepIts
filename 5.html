@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 5 : Le réseau hospitalier (RH)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .content-area {
+            padding: 30px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        h3 { font-size: 1.6em; color: var(--accent-color); margin-bottom: 20px; font-weight: 600; }
+        h4 { font-size: 1.2em; color: var(--primary-color); margin: 25px 0 15px 0; font-weight: 600; }
+        .highlight-title { color: var(--accent-color); font-weight: 600; }
+
+        ul, ol { list-style: none; padding-left: 0; }
+        li { position: relative; margin-bottom: 10px; padding-left: 25px; }
+        
+        ul.simple-list li::before, .list-styled li::before { position: absolute; left: 0; font-weight: bold; }
+        ul.simple-list li::before { content: '•'; color: var(--primary-color); }
+        ul.nested-list { margin-top: 10px; padding-left: 20px; }
+        ul.nested-list li::before { content: '–'; color: var(--text-color); }
+
+        .list-styled.arrow > li::before { content: '➤'; color: var(--primary-color); }
+        .list-styled.diamond > li::before { content: '❖'; color: var(--accent-color); font-size: 1.2em; }
+        
+        .highlight-red { color: var(--accent-color); font-weight: 600; }
+        blockquote { border-left: 4px solid var(--primary-color); padding-left: 20px; margin: 20px 0; font-style: italic; }
+
+        /* Missions Grid */
+        .missions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 20px; }
+        .mission-box { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; }
+        .mission-tasks { flex-grow: 1; }
+        .mission-tasks ul { padding-left: 0; }
+        .mission-tasks li::before { content: '–'; }
+        .mission-result { font-weight: 600; color: var(--primary-color); padding: 10px 15px; border-left: 2px solid var(--primary-color); margin-left: 15px; }
+
+        /* Organigram */
+        .organigram-container { margin: 25px auto; padding: 15px; border: 1px solid var(--border-color); border-radius: 8px; text-align: center; }
+        .organigram-container img { max-width: 100%; height: auto; border-radius: 4px; }
+
+        /* Formula Box */
+        .formula-container { display: flex; flex-wrap: wrap; gap: 30px; background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-top: 20px; align-items: center; }
+        .formula-variables { flex: 2; min-width: 280px; }
+        .formula-box { flex: 1; min-width: 200px; text-align: center; font-size: 1.5em; font-weight: 600; }
+        .formula-numerator { padding-bottom: 5px; border-bottom: 2px solid var(--text-color); }
+
+        /* Table Style */
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { border: 1px solid var(--border-color); padding: 12px 15px; text-align: left; }
+        thead { background-color: var(--primary-color); color: white; }
+        tbody tr:nth-child(even) { background-color: #f8f9fa; }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+            .missions-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body id="chapter-5">
+
+<div class="container">
+    <header class="chapter-header">
+        <h2>Le réseau hospitalier (RH)</h2>
+    </header>
+
+    <main class="content-area">
+
+        <!-- Section 1: Composition et Missions -->
+        <section class="section">
+            <h3>1. Composition du réseau hospitalier</h3>
+            <p>Selon le nouveau décret 14-562 relatif à l’organisation de l’offre de soins (articles 27)</p>
+            <div class="card">
+                <ul class="simple-list">
+                    <li><strong>Le réseau hospitalier est composé des établissements suivants :</strong>
+                        <ul class="nested-list">
+                            <li>Les Hôpitaux préfectoraux et provinciaux ;</li>
+                            <li>Les Hôpitaux régionaux ;</li>
+                            <li>Les formations hospitalières relevant des centres hospitaliers érigés en établissements publics (Centres hospitaliers universitaires « CHU » ou centres hospitaliers interrégionaux « CHI » ;</li>
+                            <li>Les Hôpitaux psychiatriques ;</li>
+                            <li>Les Centres régionaux d’oncologie ;</li>
+                            <li>Les Centres d’hémodialyse.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Remarque :</h4>
+                <ul class="simple-list">
+                    <li>Lorsque la superficie d’une province est étendue, son réseau hospitalier peut être renforcé par la création d’hôpitaux de proximité ou de cliniques de jour.</li>
+                    <li>Les centres hospitaliers régionaux ou interrégionaux peuvent comporter un ou plusieurs pôles d’excellence ou centres de référence.</li>
+                    <li>Le réseau hospitalier comprend en outre des structures spécialisées d’appui.</li>
+                </ul>
+            </div>
+            
+            <h3>2. Missions et fonctions de l'hôpital</h3>
+            <p>D'après le décret n° 2-06-656 13 avril 2007 relatif à l’organisation hospitalière un hôpital a pour missions :</p>
+            <div class="missions-grid">
+                <div class="mission-box">
+                    <div class="mission-tasks">
+                        <strong>1. Mission de soins</strong>
+                        <ul class="nested-list"><li>Le diagnostic</li><li>Le traitement</li><li>L'hébergement</li></ul>
+                    </div>
+                    <div class="mission-result">Fonctions</div>
+                </div>
+                <div class="mission-box">
+                    <div class="mission-tasks">
+                        <strong>2. Mission de santé publique</strong>
+                        <ul class="nested-list"><li>De service public</li><li>De santé publique</li><li>D'assistance</li></ul>
+                    </div>
+                    <div class="mission-result">Fonctions</div>
+                </div>
+                <div class="mission-box">
+                    <div class="mission-tasks">
+                        <strong>3. Mission économique et managériale</strong>
+                        <ul class="nested-list"><li>D'achat</li><li>De gestion des productions</li><li>De direction</li></ul>
+                    </div>
+                    <div class="mission-result">Fonctions</div>
+                </div>
+                <div class="mission-box">
+                    <div class="mission-tasks">
+                        <strong>4. Mission de développement professionnel</strong>
+                        <ul class="nested-list"><li>Enseignement</li><li>Recherche</li><li>Expertise</li></ul>
+                    </div>
+                    <div class="mission-result">Fonctions</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pôles de Gestion -->
+        <section class="section">
+            <h3>3. Attributions du directeur</h3>
+             <div class="card">
+                <ul class="list-styled arrow">
+                    <li>Nomination par le Ministre sur proposition du DRS (Art. 12 décret OH)</li>
+                    <li>La fonction de directeur de l’hôpital est à plein temps sauf dérogation du Ministre de la santé (Art. 1 RIH)</li>
+                </ul>
+                <h4>Responsabilités du Directeur : Assurer :</h4>
+                <ol style="padding-left: 25px;">
+                    <li>1. La gestion technique, administrative et financière de l’hôpital.</li>
+                    <li>2. La conduite générale de l’établissement.</li>
+                    <li>3. La mise en œuvre de la politique sanitaire.</li>
+                    <li>4. La mise en œuvre des directives ministérielles en matière de planification et de gestion hospitalière.</li>
+                    <li>5. Le bon fonctionnement de l’hôpital.</li>
+                    <li>6. Il assure le secrétariat de Comité de gestion.</li>
+                </ol>
+            </div>
+
+            <h3>4. Attributions et organisation des pôles de gestion</h3>
+            <p>L’administration du centre hospitalier et de chaque hôpital est organisée en trois pôles de gestion :</p>
+            <blockquote>Publication du décret d’organisation hospitalière n°2-06-656 du 13 avril 2007 : « L’administration de chaque centre hospitalier et de chaque hôpital le composant est organisée en trois pôles des gestion (article 14)</blockquote>
+            <ul class="simple-list">
+                <li>Un pôle des affaires médicales (PAM) ;</li>
+                <li>Un pôle des soins infirmiers (PSI) ;</li>
+                <li>Un pôle des affaires administratives (PAA).</li>
+            </ul>
+
+            <div class="card">
+                <h4>Le pôle des affaires médicales (PAM) :</h4>
+                <p>Le pôle des affaires médicales est placé sous la responsabilité d’un médecin. Il est chargé des missions suivantes :</p>
+                <ul class="simple-list">
+                    <li>La coordination et la planification des activités et programmes de soins et de services médicaux, y compris ceux relatifs à l'éducation sanitaire ;</li>
+                    <li>L'évaluation de la qualité et de la performance des soins hospitaliers ;</li>
+                    <li>La formation continue du personnel médical ;</li>
+                    <li>La contribution à la formation continue du personnel paramédical ;</li>
+                    <li>La contribution à la prévention des infections et à l’hygiène de l'établissement ;</li>
+                    <li>La planification et la gestion des ressources destinées au personnel médical ; Le pôle des affaires médicales est organisé en deux ou plusieurs bureaux en fonction du volume des activités.</li>
+                </ul>
+            </div>
+
+             <div class="card">
+                <h4>Le pôle des soins infirmiers (PSI) :</h4>
+                <p>Le pôle des soins infirmiers est placé sous la responsabilité d’un cadre titulaire du diplôme d’état d’infirmier. Il a pour mission de veiller à la bonne gestion des unités de soins et de services paramédicaux. A cet effet, il est notamment chargé des activités suivantes :</p>
+                <ul class="simple-list">
+                    <li>La coordination et la planification des activités et programmes de soins et de services paramédicaux, l’évaluation de leur qualité et performance ;</li>
+                    <li>La contribution à la prévention des infections nosocomiales ;</li>
+                    <li>La planification et la gestion des ressources destinées au personnel paramédical ;</li>
+                    <li>La contribution à l’élaboration et au suivi des programmes d’éducation sanitaire ;</li>
+                    <li>La contribution au développement de la recherche en soins infirmiers ; Le pôle des soins infirmiers est structuré en deux ou plusieurs bureaux en fonction du volume des activités.</li>
+                </ul>
+            </div>
+
+             <div class="card">
+                <h4>Le pôle des affaires administratives (PAA).</h4>
+                <p>Le pôle des affaires administratives est placé sous la responsabilité d'un cadre administratif, il a pour mission d'assurer la gestion des ressources humaines et financières ainsi que la gestion des services techniques et de maintenance. Il apporte son appui à l'ensemble des différents services de l'établissement.</p>
+                <ul class="list-styled arrow">
+                    <li><strong>Missions du pôle</strong></li>
+                    <ul class="nested-list">
+                        <li>Assurer la gestion des ressources humaines et financières</li>
+                        <li>Assurer la gestion des services techniques et de maintenance</li>
+                    </ul>
+                    <li style="margin-top:15px;"><strong>Attributions du chef du pôle</strong></li>
+                     <ul class="simple-list" style="margin-top:10px;">
+                        <li>Assurer le suivi et l’évaluation des activités du pôle</li>
+                        <li>Veiller à la cohérence des activités avec la mission de l’hôpital</li>
+                        <li>Mettre en œuvre les recommandations des instances de concertation et d'appui, qui sont en rapport avec les activités de son pôle, lorsqu'elles sont approuvées par le directeur.</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3: Instances et Classification -->
+        <section class="section">
+            <div class="card">
+                <p>Publication de l’arrêté de Madame la Ministre de la Santé n°456-11 du 06 juillet 2010 portant règlement intérieur des hôpitaux</p>
+                <ul class="simple-list">
+                    <li>Le RIH définit les attributions et l’organisation de chaque pôle de gestion</li>
+                    <li>Création des instances pour assister et appuyer le directeur de l’hôpital dans l’accomplissement de ses missions.(Art13 décret OH).</li>
+                </ul>
+                <h4>Les instances mises en place par le RIH:</h4>
+                <ul class="list-styled arrow">
+                    <li><strong>Deux instances ont une mission de planification et de coordination:</strong> Comité d'établissement (CE), Comité de gestion (CG)</li>
+                    <li><strong>Deux instances ont une mission de conseil et de concertation :</strong> Conseil des médecins, des dentistes et des pharmaciens (CMDP), Conseil des infirmières et des infirmiers (CII)</li>
+                    <li><strong>Deux instances d'appui</strong> Comité de suivi et d'évaluation (CSE), Comité de lutte contre les infections nosocomiales (CLIN)</li>
+                </ul>
+            </div>
+
+            <h3 class="highlight-title" style="text-align: center;">Instances de concertation et d'appui</h3>
+            <div class="card">
+                <ul class="list-styled diamond">
+                    <li><strong>Comité d'établissement (CE)</strong> sa mission est de définir les orientations stratégiques de l'hôpital ex : projet d’établissement, projets de contrat programme et les programmes d’investissement…</li>
+                    <li><strong>Comité de gestion (CG)</strong> il est créé dans chaque centre hospitalier régional, provincial ou préfectoral, présidé par le délégué du ministère de la santé à la province ou préfecture.</li>
+                    <li><strong>Conseil des médecins, des dentistes et des pharmaciens (CMDP)</strong> composé des représentants élus des médecins, des dentistes et des pharmaciens. Il propose des recommandations sur le fonctionnement de l’hôpital.</li>
+                    <li><strong>Conseil des infirmières et des infirmiers (CII)</strong> composé pour la moitié du responsable du pôle soins infirmiers, des infirmiers(ers) chefs de départements et des infirmiers (es) chefs de services et pour l'autre de représentants élus du personnel infirmier, des techniciens et des assistants médicaux. Les membres du conseil élisent, parmi ceux, un président sur la base de sa notoriété professionnelle. Le conseil est chargé de :</li>
+                    <ul class="simple-list" style="margin-top:10px;">
+                        <li>Apprécier la qualité et la pertinence des soins infirmiers.</li>
+                        <li>Contribuer à la formation continue.</li>
+                        <li>Donner son avis sur les questions relatives à la prestation des soins infirmiers par l'hôpital, qui lui sont soumises par le directeur de l'établissement.</li>
+                    </ul>
+                    <li style="margin-top:15px;"><strong>Comité de suivi et d’évaluation (CSE)</strong> assure le suivi des activités cliniques et informationnelles, la gestion des ressources humaines, matérielles et financières ainsi que l'analyse de la performance de l'hôpital et de la qualité des soins.</li>
+                    <li><strong>Comité de gestion (CG)</strong> il est créé dans chaque centre hospitalier régional, provincial ou préfectoral, présidé par le délégué du ministère de la santé à la province ou préfecture.</li>
+                </ul>
+            </div>
+
+            <div class="organigram-container">
+                 <!-- IMPORTANT: Remplacez 'organigramme-poles.png' par le chemin de votre image -->
+                <img src="organigramme-poles.png" alt="Organigramme des pôles de gestion et des comités de l'hôpital">
+            </div>
+
+            <h3 class="highlight-title" style="text-align: center;">Classification des hôpitaux</h3>
+            <p>Il existe des classifications des hôpitaux au Maroc à savoir :</p>
+            
+            <div class="card">
+                <h4>1. Classification selon le niveau d'intervention ou niveau de recours:</h4>
+                <ul class="simple-list">
+                    <strong class="highlight-red">❖ Hôpitaux de proximité :</strong>
+                    <ul class="nested-list">
+                        <li>Hôpital général</li>
+                        <li>Premier niveau de référence pour les établissements des soins de base qui sont dans son rayon d'influence</li>
+                        <li>5 unités de soins (MCOPU)</li>
+                        <li>Moins de 60 lits</li>
+                    </ul>
+                    <strong class="highlight-red">❖ CHP : Hôpitaux de recours provincial</strong>
+                    <ul class="nested-list">
+                        <li>Implanté au chef-lieu de la province, Il est constitué par un ou plusieurs hôpitaux généraux ou spécialisés.</li>
+                        <li>15 spécialités en plus que l'hôpital de proximité</li>
+                        <li>Plateau technique spécifique</li>
+                    </ul>
+                     <strong class="highlight-red">❖ CHR : Hôpitaux de recours régional</strong>
+                    <ul class="nested-list">
+                        <li>Implanté au chef-lieu de la région, constitué par un ou plusieurs hôpitaux généraux et spécialisés</li>
+                        <li>8 unités de soins en plus le CHP</li>
+                        <li>Plateau technique spécifique</li>
+                    </ul>
+                    <strong class="highlight-red">❖ Hôpitaux universitaires de recours interrégional ou de référence nationale</strong>
+                    <ul class="nested-list">
+                        <li>Constitué d'un ensemble d’établissements comprenant une gamme complète de services hautement spécialisés.</li>
+                        <li>Spécialités de pointe en plus</li>
+                        <li>Le CHU est un centre d'enseignement et de recherche.</li>
+                        <li>Encadrement du REH</li>
+                        <li>Son aire d'influence s'étend sur la région qu'il dessert et pour quelques disciplines à l'ensemble du pays</li>
+                    </ul>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h4>2. Classification selon le mode de gestion ou statut</h4>
+                <ul class="list-styled arrow">
+                    <li><strong>Les hôpitaux dits « en régie » ou SEGER (services de l'état gérés en régie) :</strong>
+                        <ul class="nested-list">
+                            <li>Dépendance statutaire et financière du ministère de la santé.</li>
+                            <li>Ne disposent pas de personnalité morale et liés au programme d'exécution du MS.</li>
+                            <li>Leurs ressources financières sont des crédits délégués par le département sur budget général.</li>
+                            <li>Pas de virement de crédits d'un article à l'autre.</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top:15px;"><strong>Les hôpitaux érigés en service de l'état géré de manière autonome (SEGMA) :</strong>
+                         <ul class="nested-list">
+                            <li>Ne jouissent pas d’une personnalité morale.</li>
+                            <li>Ce sont des services dotés d'une autonomie financière.</li>
+                            <li>Ils peuvent réutiliser leurs recettes.</li>
+                            <li>Leurs dépenses obéissent aux règles de la comptabilité publique.</li>
+                            <li>Formule intermédiaire entre gestion en régie et la gestion autonome.</li>
+                            <li>Bénéficie d'une subvention de l'état.</li>
+                            <li>Ils sont soumis à la subordination de l’administration sanitaire.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <blockquote>« Les SEGMA sont des services de l’état dont les opérations de recettes, de dépenses et de trésorerie sont exécutées par un chef de service sous ordonnateur à plein droit et par un comptable public spécial rattaché au comptable supérieur de royaume ».</blockquote>
+                <p>Art 65du décret Royal n°330 66 du 21 Avril 1967 et son application par le décret Royal n° 186-68 du 31 juillet 1999.</p>
+                <ul class="list-styled arrow">
+                    <li><strong>Les Centres Hospitaliers Ériges en Établissements Publics Administratifs (CHEEPA) :</strong>
+                        <ul class="nested-list">
+                            <li>Jouissent d'une personnalité morale et juridique. (Droit public).</li>
+                            <li>Sont des services dotés d'une autonomie financière.</li>
+                            <li>Peuvent effectuer des virements de crédits d’un article à un autre mais dans un même chapitre.</li>
+                            <li>Peuvent réutiliser leurs recettes.</li>
+                            <li>Peuvent recevoir des dons et des legs.</li>
+                            <li>Ils sont soumis à un certains contrôles de l’état et au respect des principes fondamentaux du service public. (Tutelle).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4>3. Classification selon l'orientation technique ou spécialisation :</h4>
+                <p>On distingue deux types d'hôpitaux :</p>
+                <ul class="list-styled arrow">
+                    <li><strong>L’hôpital général (HG) :</strong> Qui est un établissement sanitaire qui assure une série des services différenciés à des malades de tout âge et souffrant d'affections diverses. Il dispose de services médicaux techniques d’investigation, de traitement et d'hospitalisation. Il comprend outre le service des urgences, les disciplines de base suivantes : chirurgie, médecine, obstétrique, pédiatrie. Il peut aussi comprendre d’autres spécialités médicales et chirurgicales.</li>
+                    <li><strong>L’hôpital spécialisé :</strong> Qui est un établissement sanitaire qui s'occupe essentiellement des personnes souffrant d'une maladie déterminée ou d'une affection d'un appareil ou d'un organe donné. Il dispose de services médicaux réçoit généralement les malades ayant besoin des soins spéciaux, orientés par un établissement sanitaire où ils ont été vus auparavant.</li>
+                </ul>
+            </div>
+            
+             <div class="card">
+                <h4>4. Classification selon la capacité d'accueil :</h4>
+                <p>Le Règlement Intérieur des Hôpitaux consacre la capacité d'accueil (la taille) comme critère d'organisation des soins (départements et services) :</p>
+                <h5>3 catégories d'hôpitaux :</h5>
+                 <ul class="list-styled arrow">
+                     <li><strong>&lt;120 lits :</strong> 08 services</li>
+                     <li><strong>120 à 240 lits :</strong> 06 départements et 03 services</li>
+                     <li><strong>&gt;240 lits (20 hôpitaux) :</strong> 08 départements et 02 services</li>
+                 </ul>
+                 
+                 <div class="formula-container">
+                    <div class="formula-variables">
+                        <h5>Formule de calcul de la capacité litière :</h5>
+                        <ul class="nested-list" style="padding-left:0;">
+                            <li style="padding-left:0;"><strong>L :</strong> Le nombre de lit à prévoir (Capacité litière).</li>
+                            <li style="padding-left:0;"><strong>P :</strong> Effectif de la population à desservir.</li>
+                            <li style="padding-left:0;"><strong>TA :</strong> Taux d’admission (fixé à 7%).</li>
+                            <li style="padding-left:0;"><strong>DMS :</strong> Durée moyenne de séjour. (Fixée à 5 jours)</li>
+                            <li style="padding-left:0;"><strong>TOM :</strong> Taux d’occupation moyenne. (Fixé à 80%)</li>
+                        </ul>
+                    </div>
+                    <div class="formula-box">
+                        L =
+                        <div>
+                            <div class="formula-numerator">P X TA X DMS</div>
+                            <div>365 X TOM</div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Table and Structures -->
+        <section class="section">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TYPE DE L’HÔPITAL</th>
+                            <th>ORGANISATION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Les hôpitaux Généraux de Moins de 120 lits</strong></td>
+                            <td>
+                                Sont organisés en huit services :
+                                <ul class="simple-list">
+                                    <li>Le service d'accueil et d'admission (SAA)</li>
+                                    <li>Le service des urgences (SU)</li>
+                                    <li>Le service mère-enfant (SME)</li>
+                                    <li>Le service de médecine (SM)</li>
+                                    <li>Le service de chirurgie (SC), y compris le bloc opératoire</li>
+                                    <li>Le service d'imagerie médicale</li>
+                                    <li>Le service de biologie médicale</li>
+                                    <li>Le service de la pharmacie hospitalière</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Les hôpitaux Généraux de 120 à 240 lits</strong></td>
+                            <td>
+                                Sont organisés en six départements cliniques et trois services :
+                                <ul class="simple-list">
+                                    <li>Le département mère-enfant (DME)</li>
+                                    <li>Le département de médecine (DM)</li>
+                                    <li>Le département de chirurgie (DC)</li>
+                                    <li>Le département de trauma-orthopédie et de neurochirurgie</li>
+                                    <li>Le département Ophtalmo – ORL – Stomatologie</li>
+                                    <li>Le département médico-technique (DMT) regroupant notamment les unités médico-techniques suivantes : L'imagerie médicale, La biologie médicale, L'exploration fonctionnelle</li>
+                                    <li>Le service de la pharmacie hospitalière (SPH)</li>
+                                    <li>Le service d'accueil et d'admission (SAA)</li>
+                                    <li>Le service des urgences (SU)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Les hôpitaux De plus de 240 lits</strong></td>
+                            <td>
+                                Peuvent dépasser <strong>8 départements cliniques.</strong> Les urgences doivent être intégrées dans un département clinique dans le respect de la cohérence des activités médicales et chirurgicales. Ils doivent en outre comprendre :
+                                <ul class="simple-list">
+                                    <li>Le service d'accueil et d'admission (SAA)</li>
+                                    <li>Le service de la pharmacie hospitalière (SPH)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h4 class="highlight-title">Les structures spécialisées d'appui au Réseau Hospitalier</h4>
+                <ul class="list-styled arrow">
+                    <li>Le centre national et les centres régionaux de transfusion sanguine et d'hématologie.</li>
+                    <li>Les laboratoires de l' Institut National d' Hygiène.</li>
+                    <li>Le centre national antipoison et de pharmacovigilance.</li>
+                    <li>Le centre national de radioprotection.</li>
+                </ul>
+            </div>
+        </section>
+
+         <!-- Section 5: Visuals -->
+        <section class="section">
+             <div class="organigram-container">
+                 <!-- IMPORTANT: Remplacez 'organisation-niveaux.png' par le chemin de votre image -->
+                <img src="organisation-niveaux.png" alt="Organisation des hôpitaux par niveau de recours et population desservie">
+            </div>
+             <div class="organigram-container">
+                 <h3 class="highlight-title" style="text-align: center;">Organisation selon le niveau de recours</h3>
+                 <!-- IMPORTANT: Remplacez 'pyramide-recours.png' par le chemin de votre image -->
+                <img src="pyramide-recours.png" alt="Pyramide de l'organisation du système de santé selon le niveau de recours">
+            </div>
+        </section>
+        
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

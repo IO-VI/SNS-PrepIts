@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 6 : Le Réseau d'Établissements de Soins de Santé Primaires (RESSP)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .content-area {
+            padding: 30px 40px;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .highlight-title {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .highlight-red {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        ul { list-style: none; padding-left: 0; }
+        li { position: relative; margin-bottom: 10px; padding-left: 25px; }
+
+        .list-styled li::before { position: absolute; left: 0; font-weight: bold; }
+        .list-styled.diamond-list li::before { content: '❖'; color: var(--accent-color); }
+        .list-styled.dash-list li::before { content: '–'; color: var(--text-color); }
+        .list-styled.arrow-list li::before { content: '➤'; color: var(--primary-color); }
+        ul.simple-list li::before { content: '•'; color: var(--primary-color); }
+        
+        ul ul { margin-top: 10px; padding-left: 20px; }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        table {
+            width: 100%;
+            min-width: 800px; /* Force scroll on smaller screens */
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        thead {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        td[rowspan] {
+            font-weight: 600;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* Support Structures Box */
+        .support-box {
+            background-color: #e9f2fa;
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body id="chapter-6">
+
+<div class="container">
+    <header class="chapter-header">
+        <h2>Le réseau d'établissements de soins de santé primaires (RESSP)</h2>
+    </header>
+
+    <main class="content-area">
+
+        <section>
+            <p>Le Réseau des Établissements de Soins de Santé Primaires est un réseau des services de santé de première ligne ou premier échelon ou premier niveau, conçu pour agir sur les conditions des habitants, c'est la base opérationnelle de toute l'action sanitaire. Il constitue la première interface entre la population et le système de soins. C'est à travers ce réseau que se développe la stratégie de la couverture de la population par les services de santé de base (promotion de la santé, prévention, soins essentiels).</p>
+        </section>
+
+        <section>
+            <h3>1. Les structures Du RESSP</h3>
+            <ul class="list-styled diamond-list">
+                <li><strong>En milieu rural</strong>
+                    <ul class="list-styled dash-list">
+                        <li>Centre de santé rural de premier niveau : CSR1</li>
+                        <li>Centre de santé rural de 2ème niveau : CSR2</li>
+                        <li>+/-Dispensaire rural au besoin (DR)</li>
+                    </ul>
+                </li>
+                <li><strong>En milieu urbain</strong>
+                    <ul class="list-styled dash-list">
+                        <li>Centre de santé urbain de premier niveau : CSU1</li>
+                        <li>Centre de santé urbain de 2ème niveau : CSU2</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>2. Les fonctions de RESSP</h3>
+            <ul class="list-styled dash-list">
+                <li>Fonction de soins</li>
+                <li>Fonction de santé publique</li>
+                <li>Fonction d’organisation et de gestion</li>
+                <li>Fonction de formation et d’encadrement</li>
+                <li>Fonction de communication et liaison</li>
+                <li>Fonction de développement communautaire et collaboration intersectorielle</li>
+            </ul>
+        </section>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Milieu</th>
+                        <th>Type</th>
+                        <th>Responsable</th>
+                        <th>Panier de soins</th>
+                        <th>Critères</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">RURAL</td>
+                        <td>CS 1er Niveau</td>
+                        <td rowspan="4">Sous la responsabilité d'un médecin généraliste assisté par un(e) infirmier(e) Major.</td>
+                        <td>
+                            <ul class="list-styled dash-list">
+                                <li>Les consultations de médecine générale ;</li>
+                                <li>Les prestations de soins infirmiers ;</li>
+                                <li>Le suivi de la santé de la mère et de l’enfant ;</li>
+                                <li>Le suivi des maladies chroniques ;</li>
+                                <li>Le suivi de la santé des jeunes et des adolescents y compris la santé scolaire ;</li>
+                                <li>Les prestations d'information et d'éducation pour la santé ;</li>
+                                <li>Surveillance épidémiologique.</li>
+                            </ul>
+                            <strong>Remarque !</strong>
+                            <p><span class="highlight-red">Lorsque le territoire de desserte du centre de santé rural de 1er niveau est étendu, il possible de créer en plus dudit centre un ou deux dispensaires ruraux, sous la responsabilité d'un(e) infirmier(e).</span></p>
+                        </td>
+                        <td><strong>7 000 Hab.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CS 2er Niveau</td>
+                        <td>
+                            <p>Outre, les prestations de CSR 1 er niveau, le CSR2 assure :</p>
+                            <ul class="list-styled dash-list">
+                                <li>Les soins obstétricaux d’urgence de base (SOUB) ;</li>
+                                <li>Les analyses biologiques de base requises pour le suivi de la santé des femmes enceintes et des maladies chroniques ;</li>
+                                <li>Les examens d'échographie obstétricale.</li>
+                            </ul>
+                            <strong>Remarque !</strong>
+                            <p>Lorsque le CSR2 est implanté dans le chef-lieu d'un cercle administratif ne disposant pas de structure hospitalière, le centre est doté d'un module d'accouchement de 4 à 8 lits et délivre en plus :</p>
+                             <ul class="list-styled dash-list highlight-red">
+                                <li>Des prestations d'urgence médicale de proximité</li>
+                                <li>Des soins bucco-dentaires</li>
+                                <li>Des consultations de santé mentale</li>
+                            </ul>
+                        </td>
+                        <td><strong>25000 Hab.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>					
+					
+					
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Milieu</th>
+                        <th>Type</th>
+                        <th>Responsable</th>
+                        <th>Panier de soins</th>
+                        <th>Critères</th>
+                    </tr>
+                </thead>
+                <tbody>										
+                    <tr>
+                        <td rowspan="2">URBAIN</td>
+                        <td>CS 1er Niveau</td>
+                        <td rowspan="4">Sous la responsabilité d'un médecin généraliste assisté par un(e) infirmier(e) Major.</td>
+                        <td>
+                             Les mêmes prestations que le CSR de 1er niveau
+                        </td>
+                        <td><strong>25 000 Hab.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CS 2er Niveau</td>
+                         <td>
+                            <p>Outre, les prestations de CSU 1er niveau, le CSU 2 assure :</p>
+                            <ul class="list-styled dash-list">
+                                <li>Les soins obstétricaux d’urgence de base (SOUB) ;</li>
+                                <li>Les analyses biologiques de base requises pour le suivi de la santé des femmes enceintes et des malades chroniques ;</li>
+                                <li>Les examens d'échographie obstétricale</li>
+                                <li>4 à 8 lits d'accouchement au besoin ;</li>
+                            </ul>
+                            <strong>Remarque</strong>
+                            <p>Lorsque le CS est implanté dans le chef-lieu de la commune de rattachement ne disposant pas de structure hospitalière, il délivre outre :</p>
+                            <ul class="list-styled dash-list highlight-red">
+                                <li>Des prestations d'urgence médicale de proximité</li>
+                                <li>Des soins bucco-dentaires</li>
+                                <li>Des consultations de santé mentale</li>
+                            </ul>
+                        </td>
+                        <td><strong>50000 Hab.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section>
+            <h3>3. Structures d'appui du réseau des soins de santé primaires :</h3>
+            <p>Tous les établissements du RSSP sont appuyés, pour certains programmes prioritaires, par des structures d'appui et d'intervention, à savoir.</p>
+            <div class="support-box">
+                <ul class="list-styled arrow-list">
+                    <li><strong>Le centre de référence pour la santé reproductive (CRSR) :</strong>
+                         <ul class="list-styled dash-list">
+                             <li>Centre de consultation, d'information et de formation pour tout ce qui a trait aux activités de contraception et de fertilité.</li>
+                         </ul>
+                    </li>
+                     <li><strong>Les centres de diagnostic et de traitement des maladies respiratoires (CDTMR) :</strong>
+                         <ul class="list-styled dash-list">
+                             <li>Assure la prise en charge des cas de tuberculose,</li>
+                             <li>Appuie les ESSP qui interviennent dans le programme des maladies respiratoires.</li>
+                         </ul>
+                    </li>
+                     <li><strong>Les laboratoires de diagnostic épidémiologique et d'hygiène du milieu (LEHM) :</strong>
+                         <ul class="list-styled dash-list">
+                             <li>Soutient les programmes de prévention et de lutte contre les maladies transmissibles et non transmissibles,</li>
+                             <li>Contrôle de certains produits à risque et au diagnostic biologique et immunologique des maladies faisant l'objet d'un programme structuré de lutte.</li>
+                         </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h4>Autres structures d’appui :</h4>
+            <p>Selon les besoins de la population et de l'organisation des soins, le ministère de la santé peut mettre en place d'autres structures d'appui tels que :</p>
+            <ul class="simple-list">
+                <li> Centre de dépistage des cancers féminins</li>
+                <li> Centre de référence des maladies chroniques</li>
+                <li> Centre de référence en santé scolaire et universitaire</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

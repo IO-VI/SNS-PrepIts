@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 3 : Organisation du Ministère de la santé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .content-area {
+            padding: 30px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        h4 {
+             font-size: 1.3em;
+             font-weight: 600;
+             margin-top: 0;
+             margin-bottom: 15px;
+        }
+
+        .highlight-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+        
+        .source {
+            font-style: italic;
+            text-align: right;
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 15px;
+        }
+
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 25px;
+        }
+
+        /* List Styles */
+        .list-styled.arrow > li::before {
+            content: '➤';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .list-styled.diamond > li::before {
+            content: '❖';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        ul.simple-list li::before {
+             content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        strong {
+            color: var(--text-color);
+        }
+
+        /* Organigram placeholder */
+        .organigram-container {
+            margin: 25px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #fdfdfd;
+            text-align: center;
+        }
+        .organigram-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .organigram-title {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* Link Button */
+        .link-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+        .link-button:hover {
+            background-color: #c9302c;
+        }
+
+        /* Directions Grid */
+        .centered-title {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin: 40px 0 30px 0;
+        }
+        .directions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .direction-card {
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 25px;
+        }
+        .direction-card h4 {
+            color: var(--accent-color);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+            .directions-grid { grid-template-columns: 1fr; }
+        }
+
+    </style>
+</head>
+<body id="chapter-3">
+
+    <div class="container">
+        <header class="chapter-header">
+            <h2>Organisation du Ministère de la santé</h2>
+        </header>
+
+        <main class="content-area">
+
+            <!-- Section 1: Organisation Générale -->
+            <section class="section">
+                <h3 class="section-title" style="text-align:center">Organisation du ministère de la santé</h3>
+                
+                <ul class="list-styled arrow">
+                    <li><strong>Une administration centrale avec :</strong>
+                        <ul class="simple-list" style="margin-top: 10px;">
+                            <li>Le secrétariat général</li>
+                            <li>L'inspection générale</li>
+                            <li>Dix directions centrales</li>
+                            <li>Trois divisions centrales</li>
+                            <li>Services assimilés à des services centraux (ENSP ...)</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top:15px;"><strong>Des services périphériques constitués de :</strong>
+                        <ul class="simple-list" style="margin-top: 10px;">
+                            <li>Directions régionales</li>
+                            <li>Délégations provinciales et préfectorales.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Organigramme Placeholder -->
+                <div class="organigram-container">
+                    <!-- IMPORTANT: Remplacez 'organigramme-central.png' par le chemin de votre image -->
+                    <img src="organigramme-central.png" alt="Organigramme de l'administration centrale du Ministère de la Santé">
+                </div>
+            </section>
+            
+            <!-- Section 2: Établissements & Organisation Centrale -->
+            <section class="section">
+                 <div class="card">
+                     <h4 class="highlight-title">Les établissements publics sous la tutelle de l’Etat (du Ministère)</h4>
+                     <ul class="list-styled diamond">
+                         <li>Centres hospitalité universitaires (<strong>6 CHUs</strong>)</li>
+                         <li>Centre de sérums et vaccins (<strong>Institut Pasteur du Maroc</strong>)</li>
+                         <li>Agence Nationale de l'Assurance Maladies (<strong>ANAM</strong>)</li>
+                     </ul>
+                 </div>
+                 <div class="card">
+                     <h4 class="highlight-title">Organisation centrale: Services Centraux du Ministè­re de la Santé et de la Protection Sociale</h4>
+                     <ul class="list-styled diamond">
+                         <li><strong>Le Ministre:</strong> Membre du conseil du gouvernement, et membre du conseil des ministres;</li>
+                         <li><strong>Le Secrétariat Général:</strong> assure sous l'autorité du Ministre des taches techniques et administratives importantes et diverses, à sa tête un secrétaire général, considéré comme deuxième responsable après le Ministre, il assure la continuité de l'administration sanitaire ainsi que la coordination des structures du département.</li>
+                         <li><strong>Le cabinet :</strong> Gestion des dossiers de santé de nature politique et qui ne relèvent pas des attributions des services centraux du MSPS</li>
+                         <li><strong>Inspection Générale:</strong> Cette institution procède sous l'autorité du Ministre et sur ses instructions au contrôle de l'utilisation des moyens et des ressources mis à la disposition de tout le département et informe régulièrement le Ministre sur le fonctionnement des services</li>
+                     </ul>
+                 </div>
+            </section>
+            
+            <!-- Section 3: Directions et Divisions -->
+            <section class="section">
+                <h3 class="centered-title">Dix directions centrales</h3>
+                <div class="directions-grid">
+                    <div class="direction-card"><h4>Direction de la population (DP)</h4><ul class="simple-list"><li>D. de la Planification Familiale (PF)</li><li>Division de la Santé Scolaire et Universitaire</li><li>D. la Santé Maternelle et Infantile</li><li>Sce. Administratif</li><li>Sce.Réhabilitation et gériatrie</li></ul><p class="source">Décret n° 2-94-285 du 17 JOUMADA II 1415 (21 novembre 1994)</p></div>
+                    <div class="direction-card"><h4>Dir. DE L’EPIDEMIOLOGIE ET DE LA LUTTE CONTRE LES MALADIES (DLEM)</h4><ul class="simple-list"><li>Division de l'Hygiène du milieu</li><li>Division des Maladies non transmissibles</li><li>Division des Maladies transmissibles Maladies parasitaires</li><li>Service administratif</li><li>Institut National d'Hygiène</li><li>Centre National de Radioprotection</li><li>centre anti poison et pharmacovigilance Service d’oncologie</li><li>Service de surveillance épidémiologique</li></ul></div>
+                    <div class="direction-card"><h4>Dir. DES HOPITAUX ET SOINS AMBULATOIRES (DHSA)</h4><ul class="simple-list"><li>Division des Urgences et Secours</li><li>Division des Hôpitaux</li><li>Division des Soins Ambulatoires</li><li>Division de l'action médico-sociale</li><li>Centre National de Transfusion Sanguine et de l'hématologie</li></ul></div>
+                    <div class="direction-card"><h4>Dir. MEDICAMENT ET PHARMACIE (DMP)</h4><ul class="simple-list"><li>Division du Laboratoire National de Contrôle du Médicament</li><li>Division de la Pharmacie</li></ul><p class="source">Décret n° 2-94-285 du 17 JOUMADA II 1415 (21 novembre 1994)</p></div>
+                    <div class="direction-card"><h4>Dir. EQUIPEMENT ET MAINTENANCE (DEM)</h4><ul class="simple-list"><li>Division des Bâtiments et Architecture</li><li>Division du Matériel et équipements Biomédicaux</li><li>Division du Patrimoine et Programmation</li><li>Le service des Marchés</li></ul></div>
+                    <div class="direction-card"><h4>Dir. RESSOURCES HUMAINES (DRH)</h4><ul class="simple-list"><li>Œuvres sociales</li><li>Informatique et actes collectifs</li><li>Gestion prévisionnelle et des postes budgétaires</li><li>Division de la Gestion du personnel</li><li>Division de la Formation</li><li>Division du Contrôle de la santé des fonctionnaires</li></ul></div>
+                    <div class="direction-card"><h4>Dir.Réglementation et contentieux (DRC)</h4><ul class="simple-list"><li>La division de la réglementation</li><li>La division du contentieux et des affaires professionnelles</li><li>La division du partenariat .</li></ul></div>
+                    <div class="direction-card"><h4>D. PLANIFICATION ET RESSOURCES FINANCIERES (DPRF)</h4><ul class="simple-list"><li>Division de la Planification et des études</li><li>Division Financière</li><li>Division de la mise en œuvre du régime d'assistance médicale</li><li>Division de la Coopération</li></ul></div>
+                    <div class="direction-card"><h4>Dir. PROTECTION SOCIALE DES TRAVAILLEURS (DPST) <span style="font-size:0.8em">Décret n° 2-21-854 (21/10/2021)</span></h4><ul class="simple-list"><li>Division de la sécurité sociale et des accidents du travail</li><li>Division de la mutualité et des régimes complémentaires</li></ul></div>
+                    <div class="direction-card"><h4>Dir. APPROVISIONNEMENT DES MEDICAMENTS ET DES PRODUITS DE SANTE (DAMPS) <span style="font-size:0.8em">Décret n° 2-22-811 (23/02/2023)</span></h4><ul class="simple-list"><li>Division des Approvisionnements</li><li>Division des marchés et gestion du stock</li></ul></div>
+                </div>
+
+                <h3 class="centered-title">Trois divisions centrales</h3>
+                <div class="card">
+                    <div><h4 class="highlight-title">La Division du Parc Auto et Affaires Générales (DPAAG)</h4><ul class="simple-list"><li>Gestion des moyens de mobilité</li><li>Maintenance du Parc Auto</li><li>Affaires Générales</li></ul></div>
+                    <hr>
+                    <div><h4 class="highlight-title">La Division de l’Informatique et des Méthodes (DIM)</h4><ul class="simple-list"><li>Service des études et de la coordination</li><li>Service d’Exploitation et d’Appui</li></ul></div>
+                    <hr>
+                    <div><h4 class="highlight-title">La Division de l’information et de Communication (DICOM)</h4><ul class="simple-list"><li>Service de la communication institutionnelle</li><li>Service de l’information et de l’éducation sanitaire</li><li>Service de production des supports d’information et de communication</li></ul></div>
+                </div>
+            </section>
+            
+            <!-- Section 4: Administration Périphérique -->
+            <section class="section">
+                <h2 class="section-title" style="text-align:center">L'administration Périphérique</h2>
+                <p>Les services déconcentrés du ministère de la santé sont constitués des directions régionales de la santé et des délégations préfectorales et provinciales, instituées respectivement dans les ressorts territoriaux des wilayas, de régions et des préfectures, préfectures d'arrondissements ou provinces.</p>
+				<h3>1. Les directions régionales de santé</h3>
+                <ol class="simple-list">
+                    <li><strong>Les directions régionales de santé :</strong> 12 régions</li>
+                    <li><strong>Les délégations préfectorales et provinciales de la santé :</strong> 82 délégations</li>
+				</ol>
+               
+			    <h3>2. Définition</h3>
+                <p>Les directions régionales de la santé et de la protection sociales ont pour mission la mise en œuvre de la politique nationale de santé, au niveau des régions, en tenant compte des spécificités de celles-ci dans la limite de leurs ressorts territoriaux et des attributions qui leur sont déléguées par le ministre de la santé.</p>
+                
+                <h3 style="margin-top:30px;">3. Organigramme</h3>
+                <div class="organigram-container">
+                    <div class="organigram-title">LES DRSPS</div>
+                    <!-- IMPORTANT: Remplacez 'organigramme-drsp.png' par le chemin de votre image -->
+                    <img src="organigramme-drsp.png" alt="Organigramme d'une Direction Régionale de la Santé et de la Protection Sociale">
+                    <p style="margin-top:15px;"><strong>Chaque direction régionale est composée de 6 services et 2 unités</strong></p>
+                </div>
+
+                <div class="card">
+                    <ul class="list-styled arrow">
+                        <li><strong>Chaque direction régionale de la santé est composée des services suivants :</strong>
+                            <ul class="simple-list" style="margin-top:10px;">
+                                <li>Le service de la santé publique,</li>
+                                <li>Le service de l'offre de soins,</li>
+                                <li>L'observatoire régional de Santé,</li>
+                                <li>Le service des ressources financières, logistique et partenariat,</li>
+                                <li>Le service des ressources Humaines et du contentieux,</li>
+                                <li>Le service des équipements et de la maintenance.</li>
+                            </ul>
+                        </li>
+                         <li style="margin-top:15px;"><strong>Chaque direction régionale de Santé comporte :</strong>
+                            <ul class="simple-list" style="margin-top:10px;">
+                                <li>Une unité régionale des approvisionnements et de la pharmacie,</li>
+                                <li>Une unité régionale de communication et d'information,</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="card">
+                    <h4 class="highlight-title">Les attributions des services constituant la direction régionale de la santé :</h4>
+                    <p>Les attributions des services de la direction régionale de la santé sont limitées par l'arrêté du ministre de la santé N° 003/16 du 4 janvier 2016.</p>
+                    <ul class="list-styled diamond">
+                        <li>La protection de la santé publique et la veille sanitaire ;</li>
+                        <li>La planification stratégique ;</li>
+                        <li>Le financement et la gestion financière ;</li>
+                        <li>La gestion des ressources humaines ;</li>
+                        <li>Le pilotage et la coordination des actions des établissements de santé ;</li>
+                        <li>La garantie de la disponibilité, de la qualité et de l'accessibilité des médicaments et des produits pharmaceutiques non médicamenteux ;</li>
+                    </ul>
+                 </div>
+            </section>
+            
+            <!-- Section 5: Délégations Provinciales -->
+            <section class="section">
+                <h3>4. Les délégations provinciales et préfectorales</h3>
+                <p>C'est le niveau d'application et d'exécution de la politique de santé dont l'organisation interne et la compétence territoriale sont fixées par arrêté du Ministre de la santé.</p>
+                
+                <div class="card">
+                     <h4 class="highlight-title">Les attributions</h4>
+                     <ul class="list-styled diamond">
+                        <li>La supervision, la coordination, le contrôle et l'évaluation des actions de prévention et soins entreprises par les ESSP et CHP ;</li>
+                        <li>La collecte et l'exploitation des informations sanitaires ;</li>
+                        <li>La gestion des ressources humaines ;</li>
+                        <li>La contribution à l'élaboration des plans d'action de formation continue de ces ressources et veiller au suivi-évaluation de l'exécution de ces plans d'action ;</li>
+                        <li>La promotion des relations de coopération avec les intervenants dans le domaine de la santé.</li>
+                     </ul>
+                </div>
+
+                <h3 style="margin-top:30px;">5. Organigramme</h3>
+                 <p style="text-align:center;">Chaque délégation du MSPS est composée de deux services: SAE + SRES</p>
+                <div class="organigram-container">
+                     <!-- IMPORTANT: Remplacez 'organigramme-delegation.png' par le chemin de votre image -->
+                    <img src="organigramme-delegation.png" alt="Organigramme d'une Délégation du MSPS">
+                </div>
+            </section>
+            
+            <!-- Section 6: SAE et SRES -->
+            <section class="section">
+                <h3>6. Détail des Services de Délégation</h3>
+                <div class="card">
+                    <h4 class="highlight-title">6.1. Un service administratif et économique,(SAE)</h4>
+                    <p>chargé de faciliter l'organisation, l'exécution et l'évaluation de toutes les tâches d'ordre administratif ou financier.</p>
+                    <div class="organigram-container">
+                         <!-- Ceci est une recréation du diagramme. Pas besoin d'image ici. -->
+                        <div style="padding:10px 20px; border:1px solid #ccc; border-radius:8px; display:inline-block; font-weight:600;">Chef du Service Administratif et Economique (SAE)</div>
+                        <div style="display:flex; justify-content:center; gap:15px; margin-top:20px; flex-wrap:wrap;">
+                            <div style="padding:10px; border:1px solid #ccc; border-radius:8px; min-width:120px; text-align:center;">Ressources humaines</div>
+                            <div style="padding:10px; border:1px solid #ccc; border-radius:8px; min-width:120px; text-align:center;">Ressources financières</div>
+                            <div style="padding:10px; border:1px solid #ccc; border-radius:8px; min-width:120px; text-align:center;">Équipements</div>
+                            <div style="padding:10px; border:1px solid #ccc; border-radius:8px; min-width:120px; text-align:center;">Maintenance</div>
+                            <div style="padding:10px; border:1px solid #ccc; border-radius:8px; min-width:120px; text-align:center;">Parc auto</div>
+                        </div>
+                    </div>
+                     <p>Chargé de l'organisation, l'exécution et l'évaluation de toutes les tâches d'ordre administratif ou financier, la gestion des ressources humaines et des contentieux</p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="highlight-title">6.2. Le service du réseau des établissements sanitaires</h4>
+                    <p>chargé d'élaborer les plans d'action des ESSP au niveau de la province ou de la préfecture et de veiller à l'encadrement, au suivi et à l'évaluation de leur exécution, et la coordination des activités du RH, REMS et RISUM.</p>
+                    <div class="organigram-container">
+                        <p>ORGANIGRAMME DU SRES selon le manuel d’organisation du SRES 2016</p>
+                        <!-- IMPORTANT: Remplacez 'organigramme-sres.png' par le chemin de votre image -->
+                        <img src="organigramme-sres.png" alt="Organigramme du SRES">
+                    </div>
+
+                    <h4 class="highlight-title" style="margin-top: 30px;">Missions du SRES</h4>
+                    <ul class="simple-list">
+                        <li>Assurer l'encadrement et le bon fonctionnement du réseau des établissements de soins de santé primaires (RESSP), y compris son mode mobile dans le respect des territoires sanitaires fixés par la carte sanitaire.</li>
+                        <li>Veiller à la coordination avec les réseaux des établissements de santé à travers la mise en place et le suivi des filières et réseaux coordonnés de soins pour assurer à la population des services de santé continus, intégrés et centrés sur la personne, la famille et la communauté.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

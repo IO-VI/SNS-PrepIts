@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préparation aux concours de recrutement de santé - PrepIts</title>
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #4a90c4);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .intro {
+            background-color: var(--card-bg-color);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chapter-card {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chapter-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 20px;
+        }
+        
+        .chapter-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .chapter-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .chapter-description {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Préparation aux concours de recrutement de santé</h1>
+            <p>Le système de santé marocain - Un guide complet pour les diplômés en santé</p>
+            <a href="favorites.html" style="color: white; text-decoration: none; background-color: var(--accent-color); padding: 10px 20px; border-radius: 5px; margin-top: 20px; display: inline-block;">Voir les favoris</a>
+        </header>
+        
+        <div class="intro">
+            <h2>À propos de ce livre numérique</h2>
+            <p>Bienvenue dans ce guide complet sur le système de santé marocain, conçu spécialement pour les diplômés en santé qui se préparent aux concours de recrutement.</p>
+            <p>Ce livre numérique, développé par PrepIts, vous offre une analyse approfondie des différentes composantes du système de santé marocain pour vous aider à réussir votre concours.</p>
+        </div>
+        
+        <div class="chapters">
+            <div class="chapter-card">
+                <a href="1.html">
+                    <div class="chapter-number">1</div>
+                    <div class="chapter-title">Clarification des concepts</div>
+                    <div class="chapter-description">Introduction aux concepts fondamentaux du système de santé</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="2.html">
+                    <div class="chapter-number">2</div>
+                    <div class="chapter-title">Les composantes du système national de santé</div>
+                    <div class="chapter-description">Analyse des éléments constitutifs du système de santé marocain</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="3.html">
+                    <div class="chapter-number">3</div>
+                    <div class="chapter-title">Organisation du Ministère de la santé</div>
+                    <div class="chapter-description">Structure et fonctionnement du Ministère de la santé</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="4.html">
+                    <div class="chapter-number">4</div>
+                    <div class="chapter-title">Organisation de l'offre de soins au Maroc</div>
+                    <div class="chapter-description">Panorama de l'organisation des soins de santé au Maroc</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="5.html">
+                    <div class="chapter-number">5</div>
+                    <div class="chapter-title">Le réseau hospitalier (RH)</div>
+                    <div class="chapter-description">Présentation détaillée du réseau hospitalier marocain</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="6.html">
+                    <div class="chapter-number">6</div>
+                    <div class="chapter-title">Le réseau d'établissements de soins de santé primaires (RESSP)</div>
+                    <div class="chapter-description">Le rôle central des soins de santé primaires</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="7.html">
+                    <div class="chapter-number">7</div>
+                    <div class="chapter-title">Réseau intégré des soins d'urgences médicales (RISUM)</div>
+                    <div class="chapter-description">Organisation et gestion des urgences médicales</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="8.html">
+                    <div class="chapter-number">8</div>
+                    <div class="chapter-title">Le réseau des établissements médico-sociaux (REMS)</div>
+                    <div class="chapter-description">Structures médico-sociales et leur importance</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="9.html">
+                    <div class="chapter-number">9</div>
+                    <div class="chapter-title">La couverture sanitaire</div>
+                    <div class="chapter-description">Analyse de la couverture sanitaire au Maroc</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="10.html">
+                    <div class="chapter-number">10</div>
+                    <div class="chapter-title">La participation communautaire</div>
+                    <div class="chapter-description">Rôle de la communauté dans le système de santé</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="11.html">
+                    <div class="chapter-number">11</div>
+                    <div class="chapter-title">Le circuit du malade & filière de soins</div>
+                    <div class="chapter-description">Parcours du patient dans le système de santé</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="12.html">
+                    <div class="chapter-number">12</div>
+                    <div class="chapter-title">Les programmes de santé</div>
+                    <div class="chapter-description">Programmes nationaux de santé et leur mise en œuvre</div>
+                </a>
+            </div>
+            
+            <div class="chapter-card">
+                <a href="13.html">
+                    <div class="chapter-number">13</div>
+                    <div class="chapter-title">Ressources humaines du Ministère de la santé</div>
+                    <div class="chapter-description">Gestion des ressources humaines dans le secteur de la santé</div>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 PrepIts - Tous droits réservés</p>
+            <p>Conçu pour la préparation aux concours de recrutement de santé</p>
+        </footer>
+    </div>
+</body>
+</html>

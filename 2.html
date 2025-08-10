@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 : Les composantes du système national de santé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Bleu institutionnel */
+            --accent-color: #D9534F;  /* Rouge pour l'accentuation */
+            --text-color: #333333;
+            --bg-color: #F8F9FA;
+            --card-bg-color: #FFFFFF;
+            --border-color: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 40px;
+        }
+
+        .chapter-header h2 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .intro-text {
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .content-area {
+            padding: 30px 40px;
+        }
+        
+        /* Styles spécifiques au diagramme */
+        .central-hub {
+            text-align: center;
+            margin: 20px auto 40px auto;
+            padding: 12px 25px;
+            background-color: #e9f2fa;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            width: fit-content;
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .sector-card {
+            background-color: #fff;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sector-card h3 {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .sector-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .sector-card ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .sector-card ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        .sector-card p {
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content-area { padding: 20px; }
+            .chapter-header h2 { font-size: 1.8em; }
+            
+            /* Passage de la grille à une seule colonne sur mobile */
+            .sectors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body id="chapter-2">
+
+    <div class="container">
+        <header class="chapter-header">
+            <h2>Les composantes du système national de santé</h2>
+        </header>
+
+        <main class="content-area">
+            <p class="intro-text">Le Système national marocain de santé se compose des secteurs suivants :</p>
+
+            <div class="central-hub">
+                <span>composantes du SNS</span>
+            </div>
+
+            <div class="sectors-grid">
+                
+                <div class="sector-card">
+                    <h3>Secteur public : Il réunit</h3>
+                    <ul>
+                        <li>Offre de soins du MS</li>
+                        <li>Réseau hospitalier</li>
+                        <li>Réseau de soins de santé primaires</li>
+                        <li>RISUM</li>
+                        <li>REMS</li>
+                        <li>Instituts et Laboratoires nationaux</li>
+                        <li>Services de santé des Forces Armes Royales</li>
+                        <li>Bureaux municipaux et communaux d'hygiène</li>
+                    </ul>
+                </div>
+
+                <div class="sector-card">
+                    <h3>Secteur privé à but non lucratif :</h3>
+                     <ul>
+                        <li>Les hôpitaux des établissements de soins de la CNSS, des mutuelles, de l'OCP et de l'ONE ;</li>
+                        <li>Les cabinets dentaires et les laboratoires d'analyse des mutuelles ;</li>
+                        <li>Les hôpitaux et les centres de soins du croissant rouge marocain ;</li>
+                        <li>Les hôpitaux et centres de soins des ligues et des fondations</li>
+                    </ul>
+                </div>
+
+                <div class="sector-card">
+                    <h3>Secteur privé à but lucratif : représenté par</h3>
+                    <ul>
+                        <li>Les cabinets médicaux,</li>
+                        <li>Les hôpitaux et cliniques privés</li>
+                        <li>Les cabinets de médecine dentaire,</li>
+                        <li>Les officines de pharmacie,</li>
+                        <li>Les opticiens et prothésistes, - Laboratoires d'analyse privés, etc</li>
+                    </ul>
+                </div>
+
+                <div class="sector-card">
+                    <h3>Secteur traditionnel : Médecine traditionnelle</h3>
+                    <ul>
+                        <li>C'est un secteur de médecine traditionnelle non formel auquel a recours un nombre relativement important de la population particulièrement en milieu rural.</li>
+                        <li>L'accouchement à domicile par les « Kablas » se pratique dans plusieurs cas, de même que les herboristes (qui assurent les soins par les plantes) et apporte une large contribution dans les traitements traditionnels</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
