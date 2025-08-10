@@ -121,6 +121,7 @@
         </header>
         <div id="favorites-grid" class="chapters"></div>
     </div>
+    <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const chapterData = {
@@ -163,33 +164,10 @@
                 });
             }
 
-            const fabContainer = document.createElement('div');
-            fabContainer.className = 'fab-container';
-
-            fabContainer.innerHTML = `
-                <div class="fab-menu">
-                    <button id="backToIndex" title="Back to Index">🏠</button>
-                    <button id="modeBtn" title="Toggle Day/Night Mode">🌗</button>
-                </div>
-                <button id="fabMain" class="fab-main">☰</button>
-            `;
-            document.body.appendChild(fabContainer);
-
-            const fabMain = document.getElementById('fabMain');
-            const fabMenu = document.querySelector('.fab-menu');
-
-            fabMain.addEventListener('click', () => {
-                fabMenu.classList.toggle('open');
-                fabMain.textContent = fabMenu.classList.contains('open') ? '✕' : '☰';
-            });
-
-            document.getElementById('backToIndex').addEventListener('click', () => {
-                window.location.href = 'index.html';
-            });
-
-            document.getElementById('modeBtn').addEventListener('click', () => {
-                document.body.classList.toggle('night-mode');
-            });
+            // Check for saved night mode preference
+            if (localStorage.getItem('nightMode') === 'enabled') {
+                document.body.classList.add('night-mode');
+            }
         });
     </script>
 </body>

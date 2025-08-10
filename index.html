@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Préparation aux concours de recrutement de santé - PrepIts</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --primary-color: #005A9C; /* Bleu institutionnel */
@@ -133,6 +134,7 @@
             opacity: 0.7;
             font-size: 0.9rem;
         }
+
         
         @media (max-width: 768px) {
             header h1 {
@@ -150,7 +152,6 @@
         <header>
             <h1>Préparation aux concours de recrutement de santé</h1>
             <p>Le système de santé marocain - Un guide complet pour les diplômés en santé</p>
-            <a href="favorites.html" style="color: white; text-decoration: none; background-color: var(--accent-color); padding: 10px 20px; border-radius: 5px; margin-top: 20px; display: inline-block;">Voir les favoris</a>
         </header>
         
         <div class="intro">
@@ -270,5 +271,15 @@
             <p>Conçu pour la préparation aux concours de recrutement de santé</p>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modeToggleBtn = document.getElementById('modeToggle');
+            modeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('night-mode');
+            });
+        });
+    </script>
+
+<script src="script.js"></script>
 </body>
 </html>
