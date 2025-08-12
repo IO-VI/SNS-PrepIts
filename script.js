@@ -165,5 +165,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = `${currentChapter + 1}.html`;
             });
         }
+
+        // Adjust FAB position on scroll
+        const fabContainer = document.querySelector('.fab-container');
+        window.addEventListener('scroll', () => {
+            const chapterNav = document.querySelector('.chapter-navigation');
+            if (chapterNav) {
+                const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2; // A small tolerance
+                if (isAtBottom) {
+                    const navHeight = chapterNav.offsetHeight;
+                    fabContainer.style.bottom = `${navHeight + 20}px`; // Add some padding
+                } else {
+                    fabContainer.style.bottom = '20px'; // Reset to default
+                }
+            }
+        });
     }
 });

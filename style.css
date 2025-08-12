@@ -6,6 +6,7 @@
     flex-direction: column-reverse; /* Main button at the bottom */
     align-items: center;
     z-index: 1000;
+    transition: bottom 0.3s ease-in-out; /* Smooth transition for bottom property */
 }
 
 .fab-main {
